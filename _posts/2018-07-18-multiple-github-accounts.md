@@ -6,21 +6,21 @@ title: Managing multiple GitHub accounts
 Authenticating correctly over SSH with multiple GitHub accounts can be a pain.
 Here is how I manage it.
 
-First up, I guess, is why might you need multiple GitHub accounts at all? I
+Before we start, why might you need multiple GitHub accounts at all? I
 first came across the need when the permission requirements to log in to a
 client's Jenkins asked for full read and write access to all my public and
-private repositories. This was clearly not needed but getting it changed was
-going to be harder than just creating a separate work GitHub account.
+private repositories. This was not needed but getting it changed was
+going to be hard. Creating a separate work GitHub account solved the problem.
 
 GitHub will not allow you to use the same SSH key for more than one account
-because it would not be able to determine with user to authenticate as.
-So I create a new SSH key pair for the new work account and upload that.
-However, now I have the problem that I have two SSH keys that are both valid 
-for github. When I try to use git SSH tries the available keys until it finds
-one that works and GitHub authenticates with that. There is no guarantee that
-this is the correct one.
+because it would not be able to figure out which user to authenticate as.
+As a result I needed to create a new SSH key pair for the new account and
+upload that. However, then I had the problem that two SSH keys were both valid 
+for github. When I tried to use git, SSH tried the available keys until it found
+one that worked and GitHub authenticated with that. There was no guarantee that
+this was the correct one.
 
-The way I got around the problem is to set up two sections in my `.ssh/config`,
+The way I got around the problem was to set up two sections in my `.ssh/config`,
 each offering a different key and then change the host name on the work git
 repositories to force them to use the work key.
 
