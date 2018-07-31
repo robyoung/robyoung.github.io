@@ -173,7 +173,8 @@ section {
 
 section h2 {
     margin: 0;
-    font-size: 3em;
+    margin-top: 0.5em;
+    font-size: 2.5em;
 }
 
 section.success {
@@ -216,7 +217,7 @@ section.success {
 }
 
 #pages p {
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 
 #portfolio .portfolio-item {
