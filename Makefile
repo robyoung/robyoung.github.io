@@ -2,13 +2,18 @@ SHELL := /bin/bash
 .PHONY: jekyll docker-build docker-run gke-tag gke-push
 
 jekyll:
-	jekyll build
+	@echo docker run --rm -v $$(pwd):/srv/jekyll jekyll/jekyll jekyll
 
-docker-build:
+build-jekyll:
+	docker run --rm -v $$(pwd):/srv/jekyll jekyll/jekyll jekyll build
+
+build-docker:
 	docker build -t robyoung.digital:$$(git rev-parse --short HEAD) .
 	docker tag robyoung.digital:$$(git rev-parse --short HEAD) robyoung.digital:latest
 
-docker-run:
+build: build-jekyll build-docker
+
+serve: build-docker
 	docker run -p 80:80 robyoung.digital
 
 gke-tag:
