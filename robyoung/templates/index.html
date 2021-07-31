@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <script src="/grid.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div id="grid">
+  {% for i in range(end=25) %}
+  <div id="cell-{{ i }}"></div>
+  {% endfor %}
+</div>
+
+<p>Click <a href="/blog/">here</a> to see my posts.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu sapien dolor. Proin convallis, mi vel tincidunt volutpat, diam tellus sagittis diam, vitae tempus erat urna dignissim nisl. Donec sed sapien sed velit hendrerit ornare. In massa risus, accumsan a condimentum in, pulvinar ut neque. Nunc ac lacus consequat, lacinia ipsum quis, sagittis urna. Duis auctor justo vitae lorem rutrum, quis consequat dui rhoncus. Maecenas lacus nisi, vehicula vitae metus accumsan, egestas luctus elit. Pellentesque interdum fermentum mi vitae facilisis.</p>
+
+<p>Donec eleifend bibendum malesuada. Suspendisse potenti. Etiam congue lorem id tempus tincidunt. Vestibulum aliquam arcu vel erat rhoncus rutrum. Donec egestas lorem at ex auctor tristique. Mauris sit amet ipsum turpis. Cras placerat sodales leo. Quisque enim tellus, blandit vulputate velit at, iaculis aliquet nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ullamcorper nulla id eleifend pellentesque.</p>
+
+<p>Aliquam semper urna odio, sit amet viverra diam mattis sed. Mauris iaculis, dolor vel porttitor condimentum, risus enim feugiat ipsum, eget suscipit est ipsum ut nulla. Donec vitae tristique risus. Mauris vehicula dolor vitae egestas lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis nec maximus nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio venenatis augue volutpat mattis. Integer consectetur ante sit amet porta vulputate.</p>
+
+Vivamus turpis ex, placerat vel laoreet nec, condimentum in lorem. Proin tincidunt nec nisl sit amet cursus. Suspendisse ligula justo, scelerisque id neque vitae, imperdiet finibus dolor. Etiam pretium velit et tincidunt congue. In rutrum est quis lobortis sollicitudin. Suspendisse eu gravida arcu. Nunc vitae ante et ipsum feugiat faucibus vitae non tortor. Nullam eleifend nisi ut rhoncus lacinia. Aliquam aliquam tellus eget dui condimentum venenatis in a libero. Duis efficitur faucibus odio quis sollicitudin. Phasellus et nulla eget nulla blandit fermentum sit amet facilisis urna. Aenean ac pulvinar ligula. Aenean aliquam porttitor urna sit amet auctor. Cras consequat est vel felis tincidunt, ut faucibus leo malesuada.
+
+Fusce nec justo rhoncus, aliquet lacus sed, dignissim sapien. Sed gravida non tellus eu viverra. Duis scelerisque aliquam tellus, eget tincidunt mi interdum non. Suspendisse bibendum lorem ac quam finibus, sit amet consequat magna congue. Nunc ipsum justo, porta in nulla vel, iaculis placerat lacus. Etiam ut finibus tellus, accumsan fermentum eros. Sed placerat, eros vel convallis consequat, orci magna dapibus odio, nec rutrum dui mauris sit amet odio. Fusce malesuada rutrum arcu non sagittis. Mauris nec ullamcorper dui, id fermentum magna. Ut sit amet est quis turpis tincidunt sagittis. </p>
+{% endblock content %}

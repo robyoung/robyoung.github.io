@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rob Young | digital</title>
+
+  <link href="/style.css" rel="stylesheet">
+
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  <header>
+    <a class="site-header" href="/">Rob Young | <strong>digital</strong></a>
+
+    <div class="filler"></div>
+
+    <nav>
+      <ul>
+        <li class="{% if current_path is starting_with("/blog") %}here{% endif %}"><a href="/blog">posts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content">
+    {% block content %} {% endblock %}
+  </section>
+</body>
+
+</html>
