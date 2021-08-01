@@ -18,3 +18,4 @@ social = [
     {title = "github", url = "https://github.com/robyoung"},
     {title = "linkedin", url = "https://www.linkedin.com/in/robyoung101"},
 ]
+date_format = "%e %B %Y"

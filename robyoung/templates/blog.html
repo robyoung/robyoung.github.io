@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ section.title }}</h1>
 <ul>
   {% for page in section.pages %}
   <li>
     <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
-    <time datetime="{{ page.date }}">{{ page.date | date(format="%B, %e") }}</time>
+    <time datetime="{{ page.date }}">{{ page.date | date(format=config.extra.date_format) }}</time>
   </li>
   {% endfor %}
 </ul>

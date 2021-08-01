@@ -1,7 +1,7 @@
 const MAX_CELL = 24;
-const MAX_HISTORY = 2;
-const STEP_TIME = 10000;
-const START_LAG = 5000;
+const MAX_HISTORY = 3;
+const STEP_TIME = 5000;
+const START_LAG = 1000;
 const CLEAR_LAG = 2000;
 
 document.addEventListener('DOMContentLoaded', (event) => {
