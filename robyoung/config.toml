@@ -13,4 +13,8 @@ build_search_index = false
 highlight_code = true
 
 [extra]
-# Put all your custom variables here
+social = [
+    {title = "twitter", url = "https://twitter.com/roryoung"},
+    {title = "github", url = "https://github.com/robyoung"},
+    {title = "linkedin", url = "https://www.linkedin.com/in/robyoung101"},
+]

@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 /**
- * 
- * @param {*} previous 
+ *
+ * @param {*} previous
  */
 function updateGridColors(previous) {
     previous = previous || [];
@@ -45,6 +45,13 @@ function getRandomColorNum(previous) {
     }
 }
 
+/**
+ * Convert a number into an RGB colour string.
+ * Taken from https://krazydad.com/tutorials/makecolors.php
+ *
+ * @param {int} num the number to generate a color for
+ * @returns RGB colour string
+ */
 function numToColor(num) {
     let frequency = 0.3;
     let red = Math.sin(frequency * num + 0) * 127 +128;
@@ -54,17 +61,31 @@ function numToColor(num) {
     return RGB2Color(red, green, blue);
 }
 
+/**
+ * From https://krazydad.com/tutorials/makecolors.php
+ *
+ * @param {int} r red value
+ * @param {int} g green value
+ * @param {int} b blue value
+ * @returns RGB colour string
+ */
 function RGB2Color(r,g,b) {
     return '#' + byte2Hex(r) + byte2Hex(g) + byte2Hex(b);
 }
 
+/**
+ * From https://krazydad.com/tutorials/makecolors.php
+ *
+ * @param {int} n a number between 0 and 255 inclusive
+ * @returns hex string for the number
+ */
 function byte2Hex(n) {
     var nybHexString = "0123456789ABCDEF";
     return String(nybHexString.substr((n >> 4) & 0x0F,1)) + nybHexString.substr(n & 0x0F,1);
 }
 
 /**
- * 
+ *
  * @param {string} cellId the CSS ID of the cell to set the color on
  * @param {string} color the CSS color code to set the background to
  */
