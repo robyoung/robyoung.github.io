@@ -10,6 +10,20 @@ $linkedin_image: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg
 code, pre, body {
     font-family: $font-stack;
 }
+
+h1 {
+  font-size: 2em;
+}
+
+article h1 {
+  margin-bottom: 0;
+}
+
+pre {
+    padding: 1em;
+    overflow: auto;
+}
+
 body {
     color: $foreground-color;
     background-color: $background-color;
@@ -27,6 +41,18 @@ body {
     a:hover {
         text-decoration-color: $foreground-color;
     }
+
+    time {
+      font-style: italic;
+    }
+
+    time.title {
+      display: block;
+    }
+}
+
+ul h2 {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -74,10 +100,6 @@ header {
 }
 
 section.content {
-    pre {
-        padding: 1em;
-        overflow: auto;
-    }
 
     #grid {
         margin: 40px 40px 20px 20px;

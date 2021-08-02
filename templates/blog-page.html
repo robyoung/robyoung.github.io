@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+<article>
 <h1>{{ page.title }}</h1>
 
-<p><em>{{ page.date | date(format=config.extra.date_format)}}</em></p>
+<time class="title" datetime="{{ page.date }}">{{ page.date | date(format=config.extra.date_format)}}</time>
 
 {{ page.content | safe }}
+</article>
 {% endblock content %}
