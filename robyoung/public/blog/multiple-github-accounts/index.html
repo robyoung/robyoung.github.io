@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rob Young | digital</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+  <header>
+    <a class="site-header" href="/">Rob Young | <strong>digital</strong></a>
+
+    <div class="filler"></div>
+
+    <nav>
+      <ul>
+        <li class="here"><a href="/blog">posts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content">
+    
+<h1>Managing multiple GitHub accounts</h1>
+
+<p><em>18 July 2018</em></p>
+
+<p>Authenticating correctly over SSH with multiple GitHub accounts can be a pain.
+Here is how I manage it.</p>
+<p>Before we start, why might you need multiple GitHub accounts at all? I
+first came across the need when the permission requirements to log in to a
+client's Jenkins asked for full read and write access to all my public and
+private repositories. This was not needed but getting it changed was
+going to be hard. Creating a separate work GitHub account solved the problem.</p>
+<p>GitHub will not allow you to use the same SSH key for more than one account
+because it would not be able to figure out which user to authenticate as.
+As a result I needed to create a new SSH key pair for the new account and
+upload that. However, then I had the problem that two SSH keys were both valid
+for github. When I tried to use git, SSH tried the available keys until it found
+one that worked and GitHub authenticated with that. There was no guarantee that
+this was the correct one.</p>
+<p>The way I got around the problem was to set up two sections in my <code>.ssh/config</code>,
+each offering a different key and then change the host name on the work git
+repositories to force them to use the work key.</p>
+<h3 id="ssh-config"><code>.ssh/config</code></h3>
+<pre style="background-color:#2b303b;">
+<code class="language-config" data-lang="config"><span style="color:#bf616a;">Host </span><span style="color:#c0c5ce;">github.com</span><span style="color:#c0c5ce;">
+  </span><span style="color:#bf616a;">IdentityFile </span><span style="color:#c0c5ce;">~/.ssh/personal-ssh-key</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#bf616a;">Host </span><span style="color:#c0c5ce;">github-work</span><span style="color:#c0c5ce;">
+  </span><span style="color:#bf616a;">Hostname </span><span style="color:#c0c5ce;">github.com</span><span style="color:#c0c5ce;">
+  </span><span style="color:#bf616a;">IdentityFile </span><span style="color:#c0c5ce;">~/.ssh/work-ssh-key</span><span style="color:#c0c5ce;">
+</span></code></pre><h3 id="update-origin-host">update origin host</h3>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#c0c5ce;">&gt; git </span><span style="color:#bf616a;">config --replace-all</span><span style="color:#c0c5ce;"> remote.origin.url $(</span><span style="color:#bf616a;">git</span><span style="color:#c0c5ce;"> config remote.origin.url | </span><span style="color:#bf616a;">sed </span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">s/github.com/github-work/g</span><span style="color:#c0c5ce;">&#39;)</span><span style="color:#c0c5ce;">
+</span></code></pre>
+
+  </section>
+</body>
+
+</html>
