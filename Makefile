@@ -1,26 +1,15 @@
 SHELL := /bin/bash
-.PHONY: jekyll docker-build docker-run gke-tag gke-push
+.PHONY: build serve deploy
 
-jekyll:
-	@echo docker run --rm -v $$(pwd):/srv/jekyll jekyll/jekyll jekyll
+build:
+	zola build
 
-build-jekyll:
-	docker run --rm -v $$(pwd):/srv/jekyll jekyll/jekyll jekyll build
+serve:
+	zola serve --drafts
 
-build-docker:
-	docker build -t robyoung.digital:$$(git rev-parse --short HEAD) .
-	docker tag robyoung.digital:$$(git rev-parse --short HEAD) robyoung.digital:latest
-
-build: build-jekyll build-docker
-
-serve: build-docker
-	docker run -p 80:80 robyoung.digital
-
-gke-tag:
-	docker tag robyoung.digital eu.gcr.io/rob-young-digital/robyoung.digital
-	docker tag robyoung.digital:$$(git rev-parse --short HEAD) eu.gcr.io/rob-young-digital/robyoung.digital:$$(git rev-parse --short HEAD)
-
-gke-push:
-	gcloud auth configure-docker
-	docker push eu.gcr.io/rob-young-digital/robyoung.digital
-	docker push eu.gcr.io/rob-young-digital/robyoung.digital:$$(git rev-parse --short HEAD)
+deploy:
+	zola build
+	git add public
+	git commit -m "Zola build"
+	git push origin HEAD
+	git subtree push --prefix public origin gh-pages
