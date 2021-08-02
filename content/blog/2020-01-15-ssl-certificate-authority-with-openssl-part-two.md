@@ -2,7 +2,7 @@
 date = 2020-01-15
 title = "Create your own certificate authority with openssl - part two"
 +++
-In the [previous post](/2018/07/31/ssl-certificate-authority-with-openssl/) we
+In the [previous post](/blog/ssl-certificate-authority-with-openssl/) we
 set up certificate authority (CA), installed a CA certificate in our browser and
 went through the process of signing and using some server certificates. In this
 we'll create some client certificates to identify ourselves with our servers.
@@ -11,7 +11,7 @@ our browser, using them with curl and also with [socat](http://www.dest-unreach.
 As with the previous post, you can see it all tied together in this related
 [github repo](https://github.com/robyoung/nginx-client-certs).
 
-This post assumes you have the files generated in the [previous post](/2018/07/31/ssl-certificate-authority-with-openssl/).
+This post assumes you have the files generated in the [previous post](/blog/ssl-certificate-authority-with-openssl/).
 
 | File name                     | Use                                     |
 | ----------------------------- | --------------------------------------- |
