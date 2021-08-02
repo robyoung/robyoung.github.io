@@ -7,7 +7,7 @@
 
   <meta charset="utf-8" lang="en">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src: cdnjs.cloudflare.com">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.min.css" integrity="sha512-MbysAYimH1hH2xYzkkMHB6MqxBqfP0megxsCLknbYqHVwXTCg9IqHbk+ZP/vnhO8UEW6PaXAkKe2vQ+SWACxxA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link href="/style.css" rel="stylesheet">
@@ -52,17 +52,17 @@ this was the correct one.</p>
 each offering a different key and then change the host name on the work git
 repositories to force them to use the work key.</p>
 <h3 id="ssh-config"><code>.ssh/config</code></h3>
-<pre style="background-color:#2b303b;">
-<code class="language-config" data-lang="config"><span style="color:#bf616a;">Host </span><span style="color:#c0c5ce;">github.com</span><span style="color:#c0c5ce;">
-  </span><span style="color:#bf616a;">IdentityFile </span><span style="color:#c0c5ce;">~/.ssh/personal-ssh-key</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#bf616a;">Host </span><span style="color:#c0c5ce;">github-work</span><span style="color:#c0c5ce;">
-  </span><span style="color:#bf616a;">Hostname </span><span style="color:#c0c5ce;">github.com</span><span style="color:#c0c5ce;">
-  </span><span style="color:#bf616a;">IdentityFile </span><span style="color:#c0c5ce;">~/.ssh/work-ssh-key</span><span style="color:#c0c5ce;">
-</span></code></pre><h3 id="update-origin-host">update origin host</h3>
-<pre style="background-color:#2b303b;">
-<code class="language-bash" data-lang="bash"><span style="color:#c0c5ce;">&gt; git </span><span style="color:#bf616a;">config --replace-all</span><span style="color:#c0c5ce;"> remote.origin.url $(</span><span style="color:#bf616a;">git</span><span style="color:#c0c5ce;"> config remote.origin.url | </span><span style="color:#bf616a;">sed </span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">s/github.com/github-work/g</span><span style="color:#c0c5ce;">&#39;)</span><span style="color:#c0c5ce;">
+<pre data-lang="config" style="background-color:#2b303b;color:#c0c5ce;" class="language-config "><code class="language-config" data-lang="config"><span style="color:#bf616a;">Host </span><span>github.com</span><span>
+</span><span>  </span><span style="color:#bf616a;">IdentityFile </span><span>~/.ssh/personal-ssh-key</span><span>
+</span><span>
+</span><span style="color:#bf616a;">Host </span><span>github-work</span><span>
+</span><span>  </span><span style="color:#bf616a;">Hostname </span><span>github.com</span><span>
+</span><span>  </span><span style="color:#bf616a;">IdentityFile </span><span>~/.ssh/work-ssh-key</span><span>
 </span></code></pre>
+<h3 id="update-origin-host">update origin host</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span>&gt; git </span><span style="color:#bf616a;">config --replace-all</span><span> remote.origin.url $(</span><span style="color:#bf616a;">git</span><span> config remote.origin.url | </span><span style="color:#bf616a;">sed </span><span>&#39;</span><span style="color:#a3be8c;">s/github.com/github-work/g</span><span>&#39;)</span><span>
+</span></code></pre>
+
 
   </section>
 </body>
