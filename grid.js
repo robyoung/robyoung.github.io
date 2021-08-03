@@ -5,21 +5,37 @@ const START_LAG = 1000;
 const CLEAR_LAG = 2000;
 
 document.addEventListener('DOMContentLoaded', (event) => {
-  if (location.search.includes("blackout")) {
-    let grid = document.getElementById("grid");
-    let elems = grid.getElementsByTagName("div");
+  if (location.search.includes("blackout") || location.search.includes("greyout")) {
+    let elems = document.getElementById("grid").getElementsByTagName("div");
+    let colour = location.search.includes("blackout") ? "#000" : "#aaa";
     for (const elem of elems) {
-      elem.style.backgroundColor = "#000";
+      elem.style.backgroundColor = colour;
     }
   }
-  setTimeout(updateGridColors, START_LAG);
+  let start_lag = START_LAG;
+  let clear_lag = CLEAR_LAG;
+  let step_time = STEP_TIME;
+  if (location.search.includes("fast1")) {
+    start_lag /= 2;
+    clear_lag /= 2;
+    step_time /= 2;
+  } else if (location.search.includes("fast2")) {
+    start_lag /= 3;
+    clear_lag /= 3;
+    step_time /= 3;
+  } else if (location.search.includes("fast3")) {
+    start_lag /= 4;
+    clear_lag /= 4;
+    step_time /= 4;
+  }
+  setTimeout(updateGridColors, start_lag, [], clear_lag, step_time);
 });
 
 /**
  *
  * @param {*} previous
  */
-function updateGridColors(previous) {
+function updateGridColors(previous, clear_lag, step_time) {
     previous = previous || [];
     let i = getRandomCellId(previous);
     let colorNum = getRandomColorNum(previous);
@@ -28,13 +44,13 @@ function updateGridColors(previous) {
     setCellColor("cell-" + i, color);
     previous.push([i, colorNum]);
     if (previous.length > MAX_HISTORY) {
-        setTimeout(setCellColor, CLEAR_LAG, "cell-" + previous.shift()[0], "#000000");
+        setTimeout(setCellColor, clear_lag, "cell-" + previous.shift()[0], "#000000");
     }
-    setTimeout(updateGridColors, STEP_TIME, previous);
+    setTimeout(updateGridColors, step_time, previous, clear_lag, step_time);
 }
 
 function getRandomCellId(previous) {
-    let previousIds = previous.map(([i, color]) => i);
+    let previousIds = previous.map(([i, _]) => i);
     while (true) {
         let i = Math.floor(Math.random() * (MAX_CELL + 1));
         if (!previousIds.includes(i)) {
