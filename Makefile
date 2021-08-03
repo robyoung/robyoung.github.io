@@ -7,9 +7,11 @@ build:
 serve:
 	zola serve --drafts
 
-deploy:
-	zola build
-	git add public
-	git commit -m "Zola build"
-	git push origin HEAD
-	git subtree push --prefix public origin gh-pages
+deploy: build
+	cp -r public ..
+	git checkout gh-pages
+	rm -r *
+	cp -r ../public/* .
+	git add .
+	git commit -m "Deploy to gh-pages"
+	rm -r ../public
