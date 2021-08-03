@@ -5,7 +5,14 @@ const START_LAG = 1000;
 const CLEAR_LAG = 2000;
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    setTimeout(updateGridColors, START_LAG);
+  if (location.search.includes("blackout")) {
+    let grid = document.getElementById("grid");
+    let elems = grid.getElementsByTagName("div");
+    for (const elem of elems) {
+      elem.style.backgroundColor = "#000";
+    }
+  }
+  setTimeout(updateGridColors, START_LAG);
 });
 
 /**
