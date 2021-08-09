@@ -4,8 +4,46 @@
 	<link href="https://robyoung.digital/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://robyoung.digital"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2020-01-15T00:00:00+00:00</updated>
+	<updated>2021-08-08T00:00:00+00:00</updated>
 	<id>https://robyoung.digital/atom.xml</id>
+	<entry xml:lang="en">
+		<title>This Week: 1</title>
+		<published>2021-08-08T00:00:00+00:00</published>
+		<updated>2021-08-08T00:00:00+00:00</updated>
+		<link href="https://robyoung.digital/blog/this-week-1/" type="text/html"/>
+		<id>https://robyoung.digital/blog/this-week-1/</id>
+		<content type="html">&lt;p&gt;This is the first of my week notes. They follow the tech stuff I have been doing
+outside of work. These week notes are primarily to help me keep track of what
+I have been working on. I&#x27;m publishing them to encourage me to do it more regularly.
+If you are not me they will probably be really boring for you. Sorry.&lt;&#x2F;p&gt;
+&lt;p&gt;So, what have I been up to this last week?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-new-website&quot;&gt;A new website&lt;&#x2F;h2&gt;
+&lt;p&gt;The biggest thing that has happened this week is that I have rebuilt my website.
+Rob Young Digital is no longer a company so this can now be my personal site. Which
+basically means a blog.&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve moved from &lt;a href=&quot;https:&#x2F;&#x2F;jekyllrb.com&#x2F;&quot;&gt;Jekyll&lt;&#x2F;a&gt; to &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt;
+and so far I am absolutely loving it. Everything just works straight out of the box.
+It’s so easy I didn’t even bother with a theme, hence the rather minimal design.&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve moved from self hosted to GitHub Pages and so far I am absolutely loving it.
+I just push to a branch and GitHub does the rest.&lt;&#x2F;p&gt;
+&lt;p&gt;The repo is hosted at &lt;a href=&quot;https:&#x2F;&#x2F;www.github.com&#x2F;robyoung&#x2F;robyoung.github.io&quot;&gt;github.com&#x2F;robyoung&#x2F;robyoung.github.io&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-new-blog-post&quot;&gt;A new blog post&lt;&#x2F;h2&gt;
+&lt;p&gt;One reason for rebuilding my site was because I have shut my company down. Another
+reason is that I have an idea for a blog post (or series of blog posts, depending
+on how big it gets).&lt;&#x2F;p&gt;
+&lt;p&gt;Over the last few months I have been learning embedded programming with Rust. I had
+a couple of false starts and found some things pretty tough. So this week I have
+started planning out a post on things I wish I had known when starting out in embedded
+Rust.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;documentation-fixes&quot;&gt;Documentation fixes&lt;&#x2F;h2&gt;
+&lt;p&gt;Finally, while doing some research for the blog post I made some minor improvements to embedded Rust docs.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-embedded&#x2F;embedonomicon&#x2F;pull&#x2F;72&quot;&gt;rust-embedded&#x2F;embedonomicon#72&lt;&#x2F;a&gt; - Switch to using GitHub Actions for CI&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-embedded&#x2F;embedonomicon&#x2F;pull&#x2F;70&quot;&gt;rust-embedded&#x2F;embedonomicon#70&lt;&#x2F;a&gt; - Grammar fixes&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;japaric&#x2F;volatile-register&#x2F;pull&#x2F;11&quot;&gt;japaric&#x2F;volatile-register#11&lt;&#x2F;a&gt; - Add cortex-m targets to docs.rs&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Create your own certificate authority with openssl - part two</title>
 		<published>2020-01-15T00:00:00+00:00</published>
