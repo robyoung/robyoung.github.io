@@ -2,6 +2,9 @@
 
 {% block content %}
 <article>
+{% if page.draft %}
+  <div class="warning">this is a draft</div>
+{% endif %}
 <h1>{{ page.title }}</h1>
 
 <time class="title" datetime="{{ page.date }}">{{ page.date | date(format=config.extra.date_format)}}</time>
