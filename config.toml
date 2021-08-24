@@ -9,7 +9,7 @@ build_search_index = false
 default_language = "en"
 
 # Whether to generate an atom feed
-generate_feed = true
+generate_feed = false
 
 [markdown]
 # Whether to do syntax highlighting
