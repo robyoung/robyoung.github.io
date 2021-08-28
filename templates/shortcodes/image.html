@@ -1,0 +1,25 @@
+{% set page_path = page.relative_path | replace(from="index.md", to="") %}
+{% if not width %}
+  {% set width = 300 %}
+{% endif %}
+{% set image = resize_image(path=page_path ~ name, width=width, op="fit_width" ) %} 
+
+<div class="image" style="{% if float %}float: {{float}}{% endif %}">
+  {% if source %}
+  <a href="{{ source }}">
+  {% endif %}
+
+  <img src="{{ image.url }}" alt="{{alt}}">
+
+  {% if not hide_alt %}
+  <p>{{alt}}</p>
+  {% endif %}
+
+  {% if source %}
+  <p>Source: {{ source_name | default(value=source) }}
+  {% endif %}
+
+  {% if source %}
+  </a>
+  {% endif %}
+</div>

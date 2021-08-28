@@ -7,6 +7,10 @@
         <loc>https://robyoung.digital/blog/</loc>
     </url>
     <url>
+        <loc>https://robyoung.digital/blog/embedded-rust-selecting-a-board/</loc>
+        <lastmod>2021-08-26</lastmod>
+    </url>
+    <url>
         <loc>https://robyoung.digital/blog/multiple-github-accounts/</loc>
         <lastmod>2018-07-18</lastmod>
     </url>

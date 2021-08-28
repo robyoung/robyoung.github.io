@@ -152,4 +152,17 @@ section.content {
             background-image: url($linkedin_image);
         }
     }
+
+    div.image {
+      padding: 5px;
+      margin: 5px;
+      p {
+        margin: 0;
+        font-size: 0.8em;
+        font-weight: 80;
+      }
+    }
+    div.image.border {
+      border: 1px solid $secondary-color;
+    }
 }
