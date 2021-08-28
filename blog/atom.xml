@@ -4,8 +4,279 @@
 	<link href="https://robyoung.digital/blog/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://robyoung.digital/blog/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2020-01-15T00:00:00+00:00</updated>
+	<updated>2021-08-26T00:00:00+00:00</updated>
 	<id>https://robyoung.digital/blog/atom.xml</id>
+	<entry xml:lang="en">
+		<title>First steps with Embedded Rust: Selecting a board</title>
+		<published>2021-08-26T00:00:00+00:00</published>
+		<updated>2021-08-26T00:00:00+00:00</updated>
+		<link href="https://robyoung.digital/blog/embedded-rust-selecting-a-board/" type="text/html"/>
+		<id>https://robyoung.digital/blog/embedded-rust-selecting-a-board/</id>
+		<content type="html">&lt;h1 id=&quot;selecting-a-board&quot;&gt;Selecting a board&lt;&#x2F;h1&gt;
+&lt;p&gt;There are a bewildering array of microcontrollers out there and an equally bewildering
+array of exciting projects going on in the embedded Rust world. So, how do I know where
+to start?&lt;&#x2F;p&gt;
+&lt;p&gt;I have tried to focus on things I think are most important to someone with very little 
+embedded experience. That may not fit you exactly. I will try to point out adjacent 
+options as I go so please don’t stop reading just yet.&lt;&#x2F;p&gt;
+&lt;p&gt;If you just want to be told what to buy you can skip
+&lt;a href=&quot;https:&#x2F;&#x2F;robyoung.digital&#x2F;blog&#x2F;embedded-rust-selecting-a-board&#x2F;#what-board-should-i-get&quot;&gt;straight to the end&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-do-we-want-in-a-development-board&quot;&gt;What do we want in a development board?&lt;&#x2F;h2&gt;
+&lt;p&gt;So, what do we actually want in a development board? I’ve tried to order the criteria 
+in a way that allows us to whittle down our options as we go.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Good architecture support&lt;&#x2F;li&gt;
+&lt;li&gt;Good chip support&lt;&#x2F;li&gt;
+&lt;li&gt;An active community&lt;&#x2F;li&gt;
+&lt;li&gt;Built in debugger&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;what-architecture-should-i-get&quot;&gt;What architecture should I get?&lt;&#x2F;h2&gt;
+&lt;p&gt;The architecture with the most complete libraries, most thorough guides and the largest 
+community around it is ARM Cortex-M. ARM Cortex-M are low power, low cost processors 
+aimed at microcontroller applications. Looking at downloads on crates.io is not a 
+perfect metric but it gives an idea of the difference in scale. In the last 90 days the 
+cortex-m crate had over 250k downloads. The largest architecture crates for RISC-V, AVR, 
+or Xtensa had at most 3k downloads and the cortex-a crate had about 18k downloads. ARM 
+Cortex-M is in a league of its own.&lt;&#x2F;p&gt;
+&lt;p&gt;Before we zoom off down ARM Cortex-M boulevard let&#x27;s take a quick look sideways at the 
+architectures we&#x27;re leaving behind.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;avr&quot;&gt;AVR&lt;&#x2F;h3&gt;
+&lt;p&gt;AVR is a family of 8-bit microcontrollers mainly used in embedded systems. Thanks to 
+Arduino there are a lot of AVR development boards out there and lots of support for them 
+outside of Rust. Within the Rust ecosystem they are not as well supported. Until 
+recently you needed to use a fork of rustc to build for AVR. There are a couple of 
+different options now and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;avr-rust&#x2F;awesome-avr-rust&quot;&gt;awesome-avr-rust&lt;&#x2F;a&gt;
+is a good place to start.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;arm-cortex-a&quot;&gt;ARM Cortex-A&lt;&#x2F;h3&gt;
+&lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
+  
+
+  &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;robyoung.digital&amp;#x2F;processed_images&amp;#x2F;4d77b6dfc808245600.png&quot; alt=&quot;ARM logo&quot;&gt;
+
+  
+
+  
+
+  
+&lt;&#x2F;div&gt;
+&lt;p&gt;These are bigger, beefier multi-core ARM processors designed for running bigger things. 
+You would usually run a full operating system on them. For example; this is the 
+architecture used in most smartphones and handheld games consoles. Check out the &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;cortex-a&quot;&gt;cortex-a&lt;&#x2F;a&gt;
+crate for more info.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;risc-v&quot;&gt;RISC-V&lt;&#x2F;h3&gt;
+&lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
+  
+
+  &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;robyoung.digital&amp;#x2F;processed_images&amp;#x2F;5582465323d598ab00.png&quot; alt=&quot;RISC-V logo&quot;&gt;
+
+  
+
+  
+
+  
+&lt;&#x2F;div&gt;
+&lt;p&gt;This seems to be the new hotness when it comes to machine architectures. It is a free 
+and open Instruction Set Architecture (ISA). It has also been designed from outset to 
+be modular. This means chip designers can create a wide variety of specialised chips. 
+Although at the moment the range of development boards is small. There is an active 
+Rust RISC-V community so it&#x27;s worth keeping an eye on. If you’re interested in learning 
+more, &lt;a href=&quot;https:&#x2F;&#x2F;www.sifive.com&#x2F;why&quot;&gt;SiFive&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;robyoung.digital&#x2F;blog&#x2F;embedded-rust-selecting-a-board&#x2F;www.riscv.org&quot;&gt;www.riscv.org&lt;&#x2F;a&gt; are both 
+great places to start. In terms of Rust check out the &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;riscv&quot;&gt;riscv&lt;&#x2F;a&gt;
+crate.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;xtensa&quot;&gt;Xtensa&lt;&#x2F;h3&gt;
+&lt;p&gt;The most popular group of boards here are the 
+&lt;a href=&quot;https:&#x2F;&#x2F;www.espressif.com&#x2F;en&#x2F;products&#x2F;devkits&quot;&gt;ESP32&lt;&#x2F;a&gt; family of chips from Espressif. 
+They are small, cheap, WiFi enabled boards. They are great. It should be noted that 
+not all ESP32 boards use Xtensa chips, the new &lt;a href=&quot;https:&#x2F;&#x2F;hackaday.com&#x2F;2021&#x2F;02&#x2F;08&#x2F;hands-on-the-risc-v-esp32-c3-will-be-your-new-esp8266&#x2F;&quot;&gt;ESP32-C3&lt;&#x2F;a&gt;
+is RISC-V based. Probably the biggest hurdle to using Rust on Xtensa chips is that it’s 
+not supported by llvm so you need to build the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;esp-rs&#x2F;rust&quot;&gt;esp-rs fork of rust&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-chip-should-i-get&quot;&gt;What chip should I get?&lt;&#x2F;h2&gt;
+&lt;p&gt;So, we’re going to use an ARM Cortex-M. That narrows down our search but there are still 
+a lot of options. If we go through the &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;cortex-m&#x2F;reverse_dependencies&quot;&gt;cortex-m crate’s dependants&lt;&#x2F;a&gt;
+we’ll see that there are two groups of chips used more than any others; the &lt;a href=&quot;https:&#x2F;&#x2F;www.st.com&#x2F;content&#x2F;st_com&#x2F;en&#x2F;products&#x2F;microcontrollers-microprocessors&#x2F;stm32-32-bit-arm-cortex-mcus.html&quot;&gt;STM32 series&lt;&#x2F;a&gt;
+of chips and the &lt;a href=&quot;https:&#x2F;&#x2F;www.nordicsemi.com&#x2F;Products&#x2F;Bluetooth-Low-Energy&quot;&gt;nRF5 series&lt;&#x2F;a&gt;, this 
+is where we’re going to focus the search.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;stm32&quot;&gt;STM32&lt;&#x2F;h3&gt;
+&lt;p&gt;The STM32 series of chips are probably the most widely used ARM Cortex-M chips for 
+embedded rust. There are a lot of chips in the stm32 family and they have long and 
+incomprehensible names like STM32F401CCU6. If you’re interested there is 
+&lt;a href=&quot;https:&#x2F;&#x2F;www.digikey.com&#x2F;en&#x2F;maker&#x2F;blogs&#x2F;2020&#x2F;understanding-stm32-naming-conventions&quot;&gt;a guide to understanding the naming convention&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;The STM32 &lt;a href=&quot;https:&#x2F;&#x2F;docs.rust-embedded.org&#x2F;book&#x2F;appendix&#x2F;glossary.html#pac&quot;&gt;Peripheral Access Crates (PAC)&lt;&#x2F;a&gt;
+are defined in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stm32-rs&#x2F;stm32-rs&quot;&gt;stm32-rs&#x2F;stm32-rs&lt;&#x2F;a&gt;
+repo and you can find various &lt;a href=&quot;https:&#x2F;&#x2F;docs.rust-embedded.org&#x2F;book&#x2F;appendix&#x2F;glossary.html#hal&quot;&gt;Hardware Abstraction Layer (HAL)&lt;&#x2F;a&gt;
+and &lt;a href=&quot;https:&#x2F;&#x2F;docs.rust-embedded.org&#x2F;book&#x2F;appendix&#x2F;glossary.html#bsp&quot;&gt;Board Support (BSP)&lt;&#x2F;a&gt;
+crates in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stm32-rs&quot;&gt;stm32-rs&lt;&#x2F;a&gt; GitHub organisation.&lt;&#x2F;p&gt;
+&lt;p&gt;There is a chat room for discussion on all STM32 chips at &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#stm32-rs:matrix.org&quot;&gt;#stm32-rs:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
+  
+  &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;stm32-base.org&amp;#x2F;boards&amp;#x2F;STM32F103C8T6-Black-Pill.html&quot;&gt;
+  
+
+  &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;robyoung.digital&amp;#x2F;processed_images&amp;#x2F;61c1d1dc273ae31f00.jpg&quot; alt=&quot;Black Pill&quot;&gt;
+
+  
+  &lt;p&gt;Black Pill&lt;&#x2F;p&gt;
+  
+
+  
+  &lt;p&gt;Source: stm32-base.org
+  
+
+  
+  &lt;&#x2F;a&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;p&gt;Two of the most popular STM32 boards are the &lt;a href=&quot;https:&#x2F;&#x2F;stm32-base.org&#x2F;boards&#x2F;STM32F103C8T6-Blue-Pill&quot;&gt;Blue Pill&lt;&#x2F;a&gt;
+and &lt;a href=&quot;https:&#x2F;&#x2F;stm32-base.org&#x2F;boards&#x2F;STM32F103C8T6-Black-Pill&quot;&gt;Black Pill&lt;&#x2F;a&gt;. There are a 
+bunch of blogs about using them with rust. The main downside is that they do not come 
+with an on board debugger. And for that reason alone I think they make a great second 
+board.&lt;&#x2F;p&gt;
+&lt;div class=&quot;image&quot; style=&quot;float: right&quot;&gt;
+  
+  &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.st.com&amp;#x2F;en&amp;#x2F;evaluation-tools&amp;#x2F;stm32f3discovery.html&quot;&gt;
+  
+
+  &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;robyoung.digital&amp;#x2F;processed_images&amp;#x2F;8a6c3d564a5609a100.jpg&quot; alt=&quot;STM32F3 Discovery&quot;&gt;
+
+  
+  &lt;p&gt;STM32F3 Discovery&lt;&#x2F;p&gt;
+  
+
+  
+  &lt;p&gt;Source: st.com
+  
+
+  
+  &lt;&#x2F;a&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;p&gt;If you want an STM32 based board with a debugger then getting one of the official 
+&lt;a href=&quot;https:&#x2F;&#x2F;www.st.com&#x2F;en&#x2F;evaluation-tools&#x2F;stm32-discovery-kits.html#overview&quot;&gt;STMicroelectronics discovery kits&lt;&#x2F;a&gt;
+is a great option (an STM32F3 or STM32F4 are good bets). The original version of the 
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.rust-embedded.org&#x2F;discovery&#x2F;&quot;&gt;Rust Embedded Discovery book&lt;&#x2F;a&gt; is written 
+targeting the STM32F3 discovery board so there is really high quality beginner focused 
+documentation. If you go for a discovery board I would definitely start there.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;nrf5&quot;&gt;nRF5&lt;&#x2F;h3&gt;
+&lt;p&gt;The second most widely used family of ARM Cortex-M chips for embedded rust is the 
+&lt;a href=&quot;https:&#x2F;&#x2F;www.nordicsemi.com&#x2F;Products&#x2F;Bluetooth-Low-Energy&quot;&gt;nRF5 series&lt;&#x2F;a&gt; from Nordic 
+Semiconductor. The PACs are defined in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nrf-rs&#x2F;nrf-pacs&quot;&gt;nrf-rs&#x2F;nrf-pacs&lt;&#x2F;a&gt; 
+repo, the HALs are defined in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nrf-rs&#x2F;nrf-hal&quot;&gt;nrf-rs&#x2F;nrf-hal&lt;&#x2F;a&gt; 
+and there are various BSPs in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nrf-rs&quot;&gt;nrf-rs&lt;&#x2F;a&gt; organisation. 
+There is a chat room for discussion on all nRF chips at &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#nrf-rs:matrix.org&quot;&gt;#nrf-rs:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
+  
+  &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.nordicsemi.com&amp;#x2F;Products&amp;#x2F;Development-hardware&amp;#x2F;nRF52840-DK&quot;&gt;
+  
+
+  &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;robyoung.digital&amp;#x2F;processed_images&amp;#x2F;15c2819338bb5d6e00.jpg&quot; alt=&quot;nRF52840 Development Kit&quot;&gt;
+
+  
+  &lt;p&gt;nRF52840 Development Kit&lt;&#x2F;p&gt;
+  
+
+  
+  &lt;p&gt;Source: nordicsemi.com
+  
+
+  
+  &lt;&#x2F;a&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;p&gt;The official &lt;a href=&quot;https:&#x2F;&#x2F;www.nordicsemi.com&#x2F;Products&#x2F;Bluetooth-Low-Energy&#x2F;Development-hardware&quot;&gt;development kits&lt;&#x2F;a&gt; 
+(DK) are great first boards. The &lt;a href=&quot;https:&#x2F;&#x2F;knurling.ferrous-systems.com&#x2F;sessions&#x2F;&quot;&gt;knurling-rs sessions&lt;&#x2F;a&gt; 
+from Ferrous Systems use the &lt;a href=&quot;https:&#x2F;&#x2F;www.nordicsemi.com&#x2F;Products&#x2F;Development-hardware&#x2F;nRF52840-DK&quot;&gt;nRF52840 Development Kit&lt;&#x2F;a&gt;.
+The knurling sessions are really high quality, hands on guides that teach you embedded 
+rust with interesting, fun projects. I think that right now, they are the best entry 
+point to embedded development with rust. The one challenge I had was the space required. 
+I live in an apartment with my partner and a toddler. I do not have the space to safely 
+leave a project with lots of wires and small components lying around, and I only have 
+free time for a couple of hours in the evening. I found myself constantly packing things 
+up and setting them up again to make a tiny amount of progress.&lt;&#x2F;p&gt;
+&lt;div class=&quot;image&quot; style=&quot;float: right&quot;&gt;
+  
+  &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.microbit.org&amp;#x2F;&quot;&gt;
+  
+
+  &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;robyoung.digital&amp;#x2F;processed_images&amp;#x2F;482749b30ac84a9b00.png&quot; alt=&quot;BBC micro:bit V2&quot;&gt;
+
+  
+  &lt;p&gt;BBC micro:bit V2&lt;&#x2F;p&gt;
+  
+
+  
+  &lt;p&gt;Source: microbit.org
+  
+
+  
+  &lt;&#x2F;a&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;p&gt;Another great nRF based development board is the &lt;a href=&quot;https:&#x2F;&#x2F;www.microbit.org&#x2F;&quot;&gt;BBC micro:bit&lt;&#x2F;a&gt;.
+It comes with an on board debugger and a bunch of fun on board peripherals like an LED 
+display, buttons and sensors all on the board. The BBC micro:bit is designed as an 
+educational platform so the hardware is documented in a really beginner friendly way on 
+their &lt;a href=&quot;https:&#x2F;&#x2F;tech.microbit.org&#x2F;&quot;&gt;developer community&lt;&#x2F;a&gt; and there are loads of project 
+ideas around the internet (albeit in languages other than Rust). Check out the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nrf-rs&#x2F;microbit&#x2F;tree&#x2F;main&#x2F;examples&quot;&gt;examples in the micro:bit BSP&lt;&#x2F;a&gt; 
+for some idea of what you can do. &lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rp2040&quot;&gt;RP2040&lt;&#x2F;h3&gt;
+&lt;p&gt;The last chip we’re going to look at is a bit of a curveball. The &lt;a href=&quot;https:&#x2F;&#x2F;www.raspberrypi.org&#x2F;documentation&#x2F;rp2040&#x2F;getting-started&#x2F;&quot;&gt;RP2040&lt;&#x2F;a&gt;,
+released at the end of 2020, is the Raspberry Pi Foundation’s first foray into designing 
+their own silicon. Being so new, Rust support for it is still very much in development. 
+You can find the PAC, the HAL and a bunch of supporting tools in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rp-rs&quot;&gt;rp-rs&lt;&#x2F;a&gt; 
+organisation on GitHub. There is a chat room dedicated to the RP2040 at &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#rp-rs:matrix.org&quot;&gt;#rp-rs:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
+  
+  &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.raspberrypi.org&amp;#x2F;documentation&amp;#x2F;rp2040&amp;#x2F;getting-started&amp;#x2F;&quot;&gt;
+  
+
+  &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;robyoung.digital&amp;#x2F;processed_images&amp;#x2F;9d3bec7f2ff56e2100.png&quot; alt=&quot;Raspberry Pi Pico&quot;&gt;
+
+  
+  &lt;p&gt;Raspberry Pi Pico&lt;&#x2F;p&gt;
+  
+
+  
+  &lt;p&gt;Source: raspberrypi.org
+  
+
+  
+  &lt;&#x2F;a&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;p&gt;Like the BBC micro:bit the RP2040 is geared towards being an educational platform so the 
+hardware documentation is first class and there are loads of beginner friendly code 
+examples and libraries in other programming languages. That said there isn’t much 
+beginner friendly documentation for Embedded Rust on the RP2040. This is a really 
+exciting platform and there is a huge amount of activity around it in the Embedded Rust 
+community so definitely keep an eye on it, but it probably isn’t ideal as your first board.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-s-the-fuss-about-an-on-board-debugger&quot;&gt;What’s the fuss about an on board debugger?&lt;&#x2F;h2&gt;
+&lt;p&gt;When you run a program on your host machine you can easily run it in your shell and see 
+printed output. This is more difficult on an embedded target. You can make an LED flash 
+but there is no terminal. A debugger fills this gap. As well as allowing you to do step 
+through, breakpoint debugging, it allows you to load programs onto your device and 
+easily see output. A debugger is a really useful tool for embedded development.&lt;&#x2F;p&gt;
+&lt;p&gt;There is a catch though. It is usually a separate device that you connect to your host 
+and then wire up to your target device. When you’re first starting out this is a not 
+inconsiderable expense and yet another thing that you will have to set up correctly. 
+Luckily some devices come with a built-in debugger. With these devices you should be 
+able to plug them straight into your host and probe-run your code in a flash. (There is 
+usually a bit of setup needed on your host to get the debugger working, ferrous have a 
+&lt;a href=&quot;https:&#x2F;&#x2F;session20q4.ferrous-systems.com&#x2F;sessions&#x2F;installation.html&quot;&gt;good setup guide&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-board-should-i-get&quot;&gt;What board should I get?&lt;&#x2F;h2&gt;
+&lt;p&gt;All these boards have great HAL and BSP crates, active friendly communities, and an on 
+board debugger.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&quot;https:&#x2F;&#x2F;www.microbit.org&#x2F;&quot;&gt;BBC micro:bit&lt;&#x2F;a&gt; (about £13); it is the board used in the new version of the Rust Embedded Discovery book.&lt;&#x2F;li&gt;
+&lt;li&gt;An &lt;a href=&quot;https:&#x2F;&#x2F;www.nordicsemi.com&#x2F;Products&#x2F;Development-hardware&#x2F;nRF52840-DK&quot;&gt;nRF52840 Development Kit&lt;&#x2F;a&gt; (about £35); it is the board used in the Knurling Sessions and training by Ferrous Systems.&lt;&#x2F;li&gt;
+&lt;li&gt;An &lt;a href=&quot;https:&#x2F;&#x2F;www.st.com&#x2F;en&#x2F;evaluation-tools&#x2F;stm32f3discovery.html&quot;&gt;STM32F3 Discovery Kit&lt;&#x2F;a&gt; (about £14); it is the board used in the first version of the Rust Embedded Discovery book.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;and-keep-an-eye-on&quot;&gt;And keep an eye on&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.raspberrypi.org&#x2F;products&#x2F;raspberry-pi-pico&#x2F;&quot;&gt;Raspberry Pi Pico&lt;&#x2F;a&gt; (about £6 with pre-soldered pins); ARM Cortex-M but no built in debugger and the HAL is still a work in progress. On the other hand, there is a lot of activity on it at the moment and things are moving fast.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.sifive.com&#x2F;boards&#x2F;hifive1-rev-b&quot;&gt;HiFive1 Rev B&lt;&#x2F;a&gt; (about £50); RISC-V is the new hotness. There seems to be a lot of activity around it in Rust however it does not yet have the support that ARM Cortex-M has right now. Other boards to keep an eye on here are the &lt;a href=&quot;https:&#x2F;&#x2F;longan.sipeed.com&#x2F;en&#x2F;&quot;&gt;Logan Nano&lt;&#x2F;a&gt; and the &lt;a href=&quot;https:&#x2F;&#x2F;hackaday.com&#x2F;2021&#x2F;02&#x2F;08&#x2F;hands-on-the-risc-v-esp32-c3-will-be-your-new-esp8266&#x2F;&quot;&gt;ESP32-C3&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Create your own certificate authority with openssl - part two</title>
 		<published>2020-01-15T00:00:00+00:00</published>
