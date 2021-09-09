@@ -34,34 +34,54 @@
 
   <section class="content">
     
+<article>
+
+<h1>This Week: 5</h1>
+
+<time class="title" datetime="2021-09-05"> 5 September 2021</time>
+
+<p>This week I started thinking about the next post in First steps with Embedded Rust.
+I have two posts I want to do, I'm not sure sure which I should do first.</p>
+<h2 id="something-about-embedded-debugging">Something about embedded debugging</h2>
+<p>Debugging plays a slightly different role in the embedded world. The debug probe
+can be used to flash a program onto the device and stream arbitrary data to and from
+the device as well as the more familiar step-through debugging. It can also be more
+difficult to set up, often requiring a separate device.</p>
+<p>I do not want to do a post that explains what debugging means to embedded. There are
+enough good sources for that. And I do not want to do a post that gets a debugging
+environment set up for a development board, the new micro:bit discovery book does a
+great job of that.</p>
+<p>I do think there is a gap in showing how to get set up debugging with a few different
+boards. I'm unsure whether a single general post or multiple specific posts would be
+more useful.</p>
 <ul>
-  
-  <li>
-    <h2><a href="/this-week/2021-09-05/">This Week: 5</a></h2>
-    <time class="title" datetime="2021-09-05"> 5 September 2021</time>
-  </li>
-  
-  <li>
-    <h2><a href="/this-week/2021-08-29/">This Week: 4</a></h2>
-    <time class="title" datetime="2021-08-29">29 August 2021</time>
-  </li>
-  
-  <li>
-    <h2><a href="/this-week/2021-08-22/">This Week: 3</a></h2>
-    <time class="title" datetime="2021-08-22">22 August 2021</time>
-  </li>
-  
-  <li>
-    <h2><a href="/this-week/2021-08-15/">This Week: 2</a></h2>
-    <time class="title" datetime="2021-08-15">15 August 2021</time>
-  </li>
-  
-  <li>
-    <h2><a href="/this-week/2021-08-08/">This Week: 1</a></h2>
-    <time class="title" datetime="2021-08-08"> 8 August 2021</time>
-  </li>
-  
+<li>Debugging the Raspberry Pi Pico with the hs-probe</li>
+<li>Debugging the Black Pill with the hs-probe</li>
+<li>Overview of Embedded Rust debugging options
+<ul>
+<li>probe-rs</li>
+<li>openocd / pyocd</li>
+<li>different gdb front ends</li>
 </ul>
+</li>
+</ul>
+<h2 id="something-exploring-the-embedded-rust-ecosystem">Something exploring the Embedded Rust ecosystem</h2>
+<p>There are already great resources describing the different parts of the ecosystem. While
+the PACs are obviously very similar there is often quite a bit of variety between HALs
+and even more so between different BSPs. I'd like to do a post that builds a small
+very general program for multiple boards to see how the BSPs and HALs differ. I think
+it would be really interesting to follow them down to the PAC level and see how a similar
+low level API can result in quite different higher level APIs.</p>
+<p>The program I've thought of doing is called tick-tick-boom. An on board LED is flashed at
+a regular interval (the tick). After a random number of intervals as many LEDs as are
+available are flashed at random (the boom) until a button is pressed to go back to ticking.
+I think this would be interesting because it would require accessing a few common peripherals;
+the GPIO (both for output and input), an RNG and a Timer. It also offers the opportunity to
+look at pulling out core logic defined against common traits from <code>embedded-hal</code> and <code>rand_core</code>.</p>
+<p>I think this is the post I have clearest in my mind but it feels long and potentially rambling.
+I am a bit worried I'd struggle to pull it off as well as I'd like to.</p>
+
+</article>
 
   </section>
 </body>
