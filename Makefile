@@ -9,6 +9,7 @@ serve:
 
 deploy: build
 	cp -r public ..
+	git stash
 	git checkout gh-pages
 	rm -r *
 	cp -r ../public/* .
