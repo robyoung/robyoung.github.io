@@ -10,7 +10,7 @@
 		<title>First steps with Embedded Rust: Selecting a board</title>
 		<published>2021-08-26T00:00:00+00:00</published>
 		<updated>2021-08-26T00:00:00+00:00</updated>
-		<link href="https://robyoung.digital/blog/embedded-rust-selecting-a-board/" type="text/html"/>
+		<link rel="alternate" href="https://robyoung.digital/blog/embedded-rust-selecting-a-board/" type="text/html"/>
 		<id>https://robyoung.digital/blog/embedded-rust-selecting-a-board/</id>
 		<content type="html">&lt;h1 id=&quot;selecting-a-board&quot;&gt;Selecting a board&lt;&#x2F;h1&gt;
 &lt;p&gt;There are a bewildering array of microcontrollers out there and an equally bewildering
@@ -48,6 +48,10 @@ recently you needed to use a fork of rustc to build for AVR. There are a couple 
 different options now and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;avr-rust&#x2F;awesome-avr-rust&quot;&gt;awesome-avr-rust&lt;&#x2F;a&gt;
 is a good place to start.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;arm-cortex-a&quot;&gt;ARM Cortex-A&lt;&#x2F;h3&gt;
+
+
+ 
+
 &lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
   
 
@@ -64,6 +68,10 @@ You would usually run a full operating system on them. For example; this is the
 architecture used in most smartphones and handheld games consoles. Check out the &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;cortex-a&quot;&gt;cortex-a&lt;&#x2F;a&gt;
 crate for more info.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;risc-v&quot;&gt;RISC-V&lt;&#x2F;h3&gt;
+
+
+ 
+
 &lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
   
 
@@ -80,7 +88,7 @@ and open Instruction Set Architecture (ISA). It has also been designed from outs
 be modular. This means chip designers can create a wide variety of specialised chips. 
 Although at the moment the range of development boards is small. There is an active 
 Rust RISC-V community so it&#x27;s worth keeping an eye on. If you’re interested in learning 
-more, &lt;a href=&quot;https:&#x2F;&#x2F;www.sifive.com&#x2F;why&quot;&gt;SiFive&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;robyoung.digital&#x2F;blog&#x2F;embedded-rust-selecting-a-board&#x2F;www.riscv.org&quot;&gt;www.riscv.org&lt;&#x2F;a&gt; are both 
+more, &lt;a href=&quot;https:&#x2F;&#x2F;www.sifive.com&#x2F;why&quot;&gt;SiFive&lt;&#x2F;a&gt; or &lt;a href=&quot;www.riscv.org&quot;&gt;www.riscv.org&lt;&#x2F;a&gt; are both 
 great places to start. In terms of Rust check out the &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;riscv&quot;&gt;riscv&lt;&#x2F;a&gt;
 crate.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;xtensa&quot;&gt;Xtensa&lt;&#x2F;h3&gt;
@@ -107,6 +115,10 @@ repo and you can find various &lt;a href=&quot;https:&#x2F;&#x2F;docs.rust-embed
 and &lt;a href=&quot;https:&#x2F;&#x2F;docs.rust-embedded.org&#x2F;book&#x2F;appendix&#x2F;glossary.html#bsp&quot;&gt;Board Support (BSP)&lt;&#x2F;a&gt;
 crates in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stm32-rs&quot;&gt;stm32-rs&lt;&#x2F;a&gt; GitHub organisation.&lt;&#x2F;p&gt;
 &lt;p&gt;There is a chat room for discussion on all STM32 chips at &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#stm32-rs:matrix.org&quot;&gt;#stm32-rs:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+
+ 
+
 &lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
   
   &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;stm32-base.org&amp;#x2F;boards&amp;#x2F;STM32F103C8T6-Black-Pill.html&quot;&gt;
@@ -131,6 +143,10 @@ and &lt;a href=&quot;https:&#x2F;&#x2F;stm32-base.org&#x2F;boards&#x2F;STM32F103
 bunch of blogs about using them with rust. The main downside is that they do not come 
 with an on board debugger. And for that reason alone I think they make a great second 
 board.&lt;&#x2F;p&gt;
+
+
+ 
+
 &lt;div class=&quot;image&quot; style=&quot;float: right&quot;&gt;
   
   &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.st.com&amp;#x2F;en&amp;#x2F;evaluation-tools&amp;#x2F;stm32f3discovery.html&quot;&gt;
@@ -163,6 +179,10 @@ Semiconductor. The PACs are defined in the &lt;a href=&quot;https:&#x2F;&#x2F;gi
 repo, the HALs are defined in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nrf-rs&#x2F;nrf-hal&quot;&gt;nrf-rs&#x2F;nrf-hal&lt;&#x2F;a&gt; 
 and there are various BSPs in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nrf-rs&quot;&gt;nrf-rs&lt;&#x2F;a&gt; organisation. 
 There is a chat room for discussion on all nRF chips at &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#nrf-rs:matrix.org&quot;&gt;#nrf-rs:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+
+ 
+
 &lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
   
   &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.nordicsemi.com&amp;#x2F;Products&amp;#x2F;Development-hardware&amp;#x2F;nRF52840-DK&quot;&gt;
@@ -192,6 +212,10 @@ I live in an apartment with my partner and a toddler. I do not have the space to
 leave a project with lots of wires and small components lying around, and I only have 
 free time for a couple of hours in the evening. I found myself constantly packing things 
 up and setting them up again to make a tiny amount of progress.&lt;&#x2F;p&gt;
+
+
+ 
+
 &lt;div class=&quot;image&quot; style=&quot;float: right&quot;&gt;
   
   &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.microbit.org&amp;#x2F;&quot;&gt;
@@ -224,6 +248,10 @@ released at the end of 2020, is the Raspberry Pi Foundation’s first foray into
 their own silicon. Being so new, Rust support for it is still very much in development. 
 You can find the PAC, the HAL and a bunch of supporting tools in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rp-rs&quot;&gt;rp-rs&lt;&#x2F;a&gt; 
 organisation on GitHub. There is a chat room dedicated to the RP2040 at &lt;a href=&quot;https:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#rp-rs:matrix.org&quot;&gt;#rp-rs:matrix.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+
+ 
+
 &lt;div class=&quot;image&quot; style=&quot;float: left&quot;&gt;
   
   &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.raspberrypi.org&amp;#x2F;documentation&amp;#x2F;rp2040&amp;#x2F;getting-started&amp;#x2F;&quot;&gt;
@@ -281,7 +309,7 @@ board debugger.&lt;&#x2F;p&gt;
 		<title>Create your own certificate authority with openssl - part two</title>
 		<published>2020-01-15T00:00:00+00:00</published>
 		<updated>2020-01-15T00:00:00+00:00</updated>
-		<link href="https://robyoung.digital/blog/ssl-certificate-authority-with-openssl-part-two/" type="text/html"/>
+		<link rel="alternate" href="https://robyoung.digital/blog/ssl-certificate-authority-with-openssl-part-two/" type="text/html"/>
 		<id>https://robyoung.digital/blog/ssl-certificate-authority-with-openssl-part-two/</id>
 		<content type="html">&lt;p&gt;In the &lt;a href=&quot;&#x2F;blog&#x2F;ssl-certificate-authority-with-openssl&#x2F;&quot;&gt;previous post&lt;&#x2F;a&gt; we
 set up certificate authority (CA), installed a CA certificate in our browser and
@@ -304,41 +332,41 @@ As with the previous post, you can see it all tied together in this related
 certificate is pretty easy. First we create the private key. Note that if you want the
 user to have to provide a password to use this client cert you just need to create a
 passworded key and then use &lt;code&gt;passin&lt;&#x2F;code&gt; and &lt;code&gt;passout&lt;&#x2F;code&gt; when converting to PKCS later.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;genrsa -out&lt;&#x2F;span&gt;&lt;span&gt; test-client.key 2048&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;genrsa -out&lt;&#x2F;span&gt;&lt;span&gt; test-client.key 2048
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Then we create our certificate signing request. Our subject can be pretty empty for a client
 cert.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -new&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-key&lt;&#x2F;span&gt;&lt;span&gt; test-client.key \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-out&lt;&#x2F;span&gt;&lt;span&gt; test-client.csr&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -new &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -key&lt;&#x2F;span&gt;&lt;span&gt; test-client.key \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -out&lt;&#x2F;span&gt;&lt;span&gt; test-client.csr
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Then we create our signed client certificate.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;x509&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-req -in&lt;&#x2F;span&gt;&lt;span&gt; test-client.csr \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-passin&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-CA&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAkey&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAcreateserial&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-out&lt;&#x2F;span&gt;&lt;span&gt; test-client.crt \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-days&lt;&#x2F;span&gt;&lt;span&gt; 1825&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -sha256&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;x509 &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -req -in&lt;&#x2F;span&gt;&lt;span&gt; test-client.csr \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -passin&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -CA&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAkey&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAcreateserial &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -out&lt;&#x2F;span&gt;&lt;span&gt; test-client.crt \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -days&lt;&#x2F;span&gt;&lt;span&gt; 1825&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -sha256
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;In order to use this client certificate in a browser we need to convert it to PKCS.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkcs12 -export -clcerts&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-in&lt;&#x2F;span&gt;&lt;span&gt; test-client.crt&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -inkey&lt;&#x2F;span&gt;&lt;span&gt; test-client.key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -out&lt;&#x2F;span&gt;&lt;span&gt; test-client.p12&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pkcs12 -export -clcerts &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -in&lt;&#x2F;span&gt;&lt;span&gt; test-client.crt&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -inkey&lt;&#x2F;span&gt;&lt;span&gt; test-client.key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -out&lt;&#x2F;span&gt;&lt;span&gt; test-client.p12
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The steps to install it in the browser depend on the browser you&#x27;re using. For Firefox
 you scroll right to the bottom of the Privacy &amp;amp; Security tab of Preferences. Here click
 on View Certificates then Your Certificates and finally Import your .p12 file.&lt;&#x2F;p&gt;
 &lt;p&gt;Using the certificate with curl and socat is much simpler. We just need a combined PEM
 including the key, certificate and CA certificate.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; cat &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;test-client.key&lt;&#x2F;span&gt;&lt;span&gt; test-client.crt test-ca.pem &amp;gt; test-client.pem&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; cat &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;test-client.key&lt;&#x2F;span&gt;&lt;span&gt; test-client.crt test-ca.pem &amp;gt; test-client.pem
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Then this can then be used with curl&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; curl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--cacert&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --cert&lt;&#x2F;span&gt;&lt;span&gt; test-client.pem http:&#x2F;&#x2F;dev.test&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; curl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--cacert&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --cert&lt;&#x2F;span&gt;&lt;span&gt; test-client.pem http:&#x2F;&#x2F;dev.test
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;or with socat&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; socat &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;\&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tcp-listen:8096,fork,bind&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;127.0.0.1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;\&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;openssl-connect:dev.test:443,cert&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;test-client.pem,cafile=test-ca.pem&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; socat \
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tcp-listen:8096,fork,bind&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;127.0.0.1 &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;openssl-connect:dev.test:443,cert&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;test-client.pem,cafile=test-ca.pem
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;validating-the-client-certificate&quot;&gt;Validating the client certificate&lt;&#x2F;h2&gt;
 &lt;p&gt;So far we&#x27;ve created a client certificate and seen how we can use it to talk to
@@ -349,40 +377,40 @@ options are
 &lt;a href=&quot;https:&#x2F;&#x2F;nginx.org&#x2F;en&#x2F;docs&#x2F;http&#x2F;ngx_http_ssl_module.html#ssl_trusted_certificate&quot;&gt;&lt;code&gt;ssl_trusted_certificate&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; and
 &lt;a href=&quot;https:&#x2F;&#x2F;nginx.org&#x2F;en&#x2F;docs&#x2F;http&#x2F;ngx_http_ssl_module.html#ssl_verify_client&quot;&gt;&lt;code&gt;ssl_verify_client&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;nginx.vhost.conf&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;nginx&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-nginx &quot;&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span&gt;server {&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  listen 443 ssl;&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;nginx&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-nginx &quot;&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span&gt;server {
+&lt;&#x2F;span&gt;&lt;span&gt;  listen 443 ssl;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  server_name dev.test;&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  server_name dev.test;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_client_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;test-ca.pem;&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_verify_client on;&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  ssl_client_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;test-ca.pem;
+&lt;&#x2F;span&gt;&lt;span&gt;  ssl_verify_client on;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem;&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate_key &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key;&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem;
+&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate_key &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  location &#x2F; {&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    return 200 &amp;#39;Static vhost test\n&amp;#39;;&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    add_header Content-Type text&#x2F;plain;&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  location &#x2F; {
+&lt;&#x2F;span&gt;&lt;span&gt;    return 200 &amp;#39;Static vhost test\n&amp;#39;;
+&lt;&#x2F;span&gt;&lt;span&gt;    add_header Content-Type text&#x2F;plain;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And here is the docker command to run it.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; docker &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;run&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--rm -p&lt;&#x2F;span&gt;&lt;span&gt; 443:443 \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;nginx.vhost.conf:&#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;default.conf:ro \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-server.key:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key:ro \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-server-static-cert.pem:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem:ro \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-ca.pem:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;test-ca.pem:ro&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nginx&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; docker &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;run &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  --rm -p&lt;&#x2F;span&gt;&lt;span&gt; 443:443 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;nginx.vhost.conf:&#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;default.conf:ro \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-server.key:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key:ro \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-server-static-cert.pem:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem:ro \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-ca.pem:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;test-ca.pem:ro
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nginx
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Now, if you still have all the configuration from the previous post,
 we should be able to test it out.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; curl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--cacert&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --cert&lt;&#x2F;span&gt;&lt;span&gt; test-client.pem http:&#x2F;&#x2F;dev.test&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Static&lt;&#x2F;span&gt;&lt;span&gt; vhost test&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; curl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--cacert&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --cert&lt;&#x2F;span&gt;&lt;span&gt; test-client.pem http:&#x2F;&#x2F;dev.test
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Static&lt;&#x2F;span&gt;&lt;span&gt; vhost test
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;or via &lt;code&gt;socat&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; curl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;localhost:8096&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Static&lt;&#x2F;span&gt;&lt;span&gt; vhost test&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; curl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;localhost:8096
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Static&lt;&#x2F;span&gt;&lt;span&gt; vhost test
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And we&#x27;re all done!&lt;&#x2F;p&gt;
 </content>
@@ -391,7 +419,7 @@ we should be able to test it out.&lt;&#x2F;p&gt;
 		<title>Create your own certificate authority with openssl - part one</title>
 		<published>2018-07-31T00:00:00+00:00</published>
 		<updated>2018-07-31T00:00:00+00:00</updated>
-		<link href="https://robyoung.digital/blog/ssl-certificate-authority-with-openssl/" type="text/html"/>
+		<link rel="alternate" href="https://robyoung.digital/blog/ssl-certificate-authority-with-openssl/" type="text/html"/>
 		<id>https://robyoung.digital/blog/ssl-certificate-authority-with-openssl/</id>
 		<content type="html">&lt;p&gt;This post is part one of a series on working with openssl to manage your
 own certificate authority (CA) for a couple of different use cases. If you
@@ -404,42 +432,42 @@ To see it all tied together see this related &lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;h2 id=&quot;create-a-certificate-authority-with-openssl&quot;&gt;Create a certificate authority with OpenSSL&lt;&#x2F;h2&gt;
 &lt;p&gt;First we generate the private key for our CA (with a password other than
 &#x27;capassword&#x27; preferably, and ensure it&#x27;s not visible in your shell history).&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;genrsa -aes256 -passout&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -out&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key 2048&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;genrsa -aes256 -passout&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -out&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key 2048
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Next we generate the root certificate. The fields in the subject name do not
 affect the certificate&#x27;s validity. They are queryable and shown when the certificate
 is installed (firefox lists them by organisation) so use something that will remind you what it&#x27;s for.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -x509 -new -nodes&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-passin&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-key&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-sha256 -days&lt;&#x2F;span&gt;&lt;span&gt; 1825 \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&#x2F;O=robyoung.digital&#x2F;CN=test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-out&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -x509 -new -nodes &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -passin&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -key&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -sha256 -days&lt;&#x2F;span&gt;&lt;span&gt; 1825 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&#x2F;O=robyoung.digital&#x2F;CN=test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -out&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And we&#x27;re done! Next we&#x27;re going to create a server certificate and sign it
 with our shiny new CA key.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;create-a-server-certificate&quot;&gt;Create a server certificate&lt;&#x2F;h2&gt;
 &lt;p&gt;As with the CA, our first step is to generate a private key for our server.
 This time we don&#x27;t want a password otherwise it becomes harder to install.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;genrsa -out&lt;&#x2F;span&gt;&lt;span&gt; test-server.key 2048&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;genrsa -out&lt;&#x2F;span&gt;&lt;span&gt; test-server.key 2048
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Once we have a key we can generate our certificate signing request (CSR),
 just like when we&#x27;re using a public CA. This time the common name
 is significant as clients will use it to determine whether the server is
 authorised to serve that domain.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -new&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&#x2F;CN=dev.test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-key&lt;&#x2F;span&gt;&lt;span&gt; test-server.key \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-out&lt;&#x2F;span&gt;&lt;span&gt; test-server-static-csr.pem&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -new &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&#x2F;CN=dev.test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -key&lt;&#x2F;span&gt;&lt;span&gt; test-server.key \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -out&lt;&#x2F;span&gt;&lt;span&gt; test-server-static-csr.pem
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;If you need to support multiple domains with a single server certificate you
 have two options. Wildcard certificates, where you use a star (*) to match a
 domain name segment or subject alternative names (SANs).&lt;&#x2F;p&gt;
 &lt;p&gt;The wildcard certificate approach is pretty simple.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -new&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&#x2F;CN=*.dev.test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-key&lt;&#x2F;span&gt;&lt;span&gt; test-server.key \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-out&lt;&#x2F;span&gt;&lt;span&gt; test-server-wildcard-csr.pem&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -new &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&#x2F;CN=*.dev.test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -key&lt;&#x2F;span&gt;&lt;span&gt; test-server.key \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -out&lt;&#x2F;span&gt;&lt;span&gt; test-server-wildcard-csr.pem
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Subject alternative names (SAN) is an x509 extension that allows you
 to add multiple domains to a single certificate. It is bit more complex
@@ -448,15 +476,15 @@ to implement on the command line. This
 figure out how to do it. The path to your &lt;code&gt;openssl.cnf&lt;&#x2F;code&gt; is going to be system
 dependent, on Linux it will probably be &lt;code&gt;&#x2F;etc&#x2F;ssl&#x2F;openssl.cnf&lt;&#x2F;code&gt;, however on Mac
 (using a homebrew installed openssl) it is at &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;etc&#x2F;openssl&#x2F;openssl.cnf&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -new&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&#x2F;CN=dev.test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-key&lt;&#x2F;span&gt;&lt;span&gt; test-server.key \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-out&lt;&#x2F;span&gt;&lt;span&gt; test-server-san-csr.pem \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-reqexts&lt;&#x2F;span&gt;&lt;span&gt; SAN \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-config &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;\&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cat&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;openssl&#x2F;openssl.cnf \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;printf &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;[SAN]\nsubjectAltName=DNS:one.dev.test,DNS:two.dev.test\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;\&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;req -new &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -subj &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;C=GB&#x2F;CN=dev.test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -key&lt;&#x2F;span&gt;&lt;span&gt; test-server.key \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -out&lt;&#x2F;span&gt;&lt;span&gt; test-server-san-csr.pem \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -reqexts&lt;&#x2F;span&gt;&lt;span&gt; SAN \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -config &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;( \
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cat&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;local&#x2F;etc&#x2F;openssl&#x2F;openssl.cnf \
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;printf &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;[SAN]\nsubjectAltName=DNS:one.dev.test,DNS:two.dev.test\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;) \
+&lt;&#x2F;span&gt;&lt;span&gt;  )
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;While this is how you add SANs to a self signed key or a CSR you send to a
 public CA, there is unfortunately a &lt;a href=&quot;https:&#x2F;&#x2F;www.openssl.org&#x2F;docs&#x2F;manmaster&#x2F;man1&#x2F;x509.html#BUGS&quot;&gt;bug in the x509 command&lt;&#x2F;a&gt;
@@ -465,35 +493,35 @@ For our purposes if we want SANs we&#x27;re going to have to add them when we si
 the CSR.&lt;&#x2F;p&gt;
 &lt;p&gt;First, our basic certificate with no SANs. For more information about the
 extensions used see the &lt;a href=&quot;https:&#x2F;&#x2F;www.openssl.org&#x2F;docs&#x2F;manmaster&#x2F;man5&#x2F;x509v3_config.html&quot;&gt;openssl x509 config docs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;x509&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-req -in&lt;&#x2F;span&gt;&lt;span&gt; test-server-static-csr.pem \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-passin&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-CA&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAkey&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAcreateserial&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-out&lt;&#x2F;span&gt;&lt;span&gt; test-server-static-cert.pem \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-days&lt;&#x2F;span&gt;&lt;span&gt; 1825&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -sha256&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-extfile &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cat &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;EOF&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;subjectKeyIdentifier=hash&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;authorityKeyIdentifier=keyid,issuer&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;basicConstraints=CA:FALSE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;keyUsage=digitalSignature,keyEncipherment&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;EOF&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;x509 &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -req -in&lt;&#x2F;span&gt;&lt;span&gt; test-server-static-csr.pem \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -passin&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -CA&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAkey&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAcreateserial &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -out&lt;&#x2F;span&gt;&lt;span&gt; test-server-static-cert.pem \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -days&lt;&#x2F;span&gt;&lt;span&gt; 1825&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -sha256 &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -extfile &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cat &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;EOF
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;subjectKeyIdentifier=hash
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;authorityKeyIdentifier=keyid,issuer
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;basicConstraints=CA:FALSE
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;keyUsage=digitalSignature,keyEncipherment
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;EOF
+&lt;&#x2F;span&gt;&lt;span&gt;)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;With the SANs it is almost identical but with the &lt;code&gt;subjectAltName&lt;&#x2F;code&gt; extension.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;x509&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-req -in&lt;&#x2F;span&gt;&lt;span&gt; test-server-static-csr.pem \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-passin&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-CA&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAkey&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAcreateserial&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-out&lt;&#x2F;span&gt;&lt;span&gt; test-server-san-cert.pem \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-days&lt;&#x2F;span&gt;&lt;span&gt; 1825&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -sha256&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-extfile &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cat &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;EOF&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;subjectKeyIdentifier=hash&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;authorityKeyIdentifier=keyid,issuer&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;basicConstraints=CA:FALSE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;keyUsage=digitalSignature,keyEncipherment&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;subjectAltName=DNS:one.dev.test,DNS:two.dev.test&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;EOF&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; openssl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;x509 &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -req -in&lt;&#x2F;span&gt;&lt;span&gt; test-server-static-csr.pem \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -passin&lt;&#x2F;span&gt;&lt;span&gt; pass:capassword \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -CA&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAkey&lt;&#x2F;span&gt;&lt;span&gt; test-ca.key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -CAcreateserial &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -out&lt;&#x2F;span&gt;&lt;span&gt; test-server-san-cert.pem \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -days&lt;&#x2F;span&gt;&lt;span&gt; 1825&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -sha256 &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -extfile &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cat &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;EOF
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;subjectKeyIdentifier=hash
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;authorityKeyIdentifier=keyid,issuer
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;basicConstraints=CA:FALSE
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;keyUsage=digitalSignature,keyEncipherment
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;subjectAltName=DNS:one.dev.test,DNS:two.dev.test
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;EOF
+&lt;&#x2F;span&gt;&lt;span&gt;)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;We now have a CA certificate and a couple of server certificates signed by
 that CA. It&#x27;s time to test them out.&lt;&#x2F;p&gt;
@@ -502,36 +530,36 @@ that CA. It&#x27;s time to test them out.&lt;&#x2F;p&gt;
 and server key. We&#x27;re going to use a minimal ssl configuration, in real life
 you&#x27;re going to want something &lt;a href=&quot;https:&#x2F;&#x2F;wiki.mozilla.org&#x2F;Security&#x2F;TLS_Configurations#Nginx&quot;&gt;much more robust&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;nginx.vhost.conf&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;nginx&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-nginx &quot;&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span&gt;server {&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  listen 443 ssl;&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;nginx&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-nginx &quot;&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span&gt;server {
+&lt;&#x2F;span&gt;&lt;span&gt;  listen 443 ssl;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  server_name dev.test;&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  server_name dev.test;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem;&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate_key &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key;&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem;
+&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate_key &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  location &#x2F; {&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    return 200 &amp;#39;Static vhost test\n&amp;#39;;&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    add_header Content-Type text&#x2F;plain;&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  location &#x2F; {
+&lt;&#x2F;span&gt;&lt;span&gt;    return 200 &amp;#39;Static vhost test\n&amp;#39;;
+&lt;&#x2F;span&gt;&lt;span&gt;    add_header Content-Type text&#x2F;plain;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; docker &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;run&lt;&#x2F;span&gt;&lt;span&gt; \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--rm -p&lt;&#x2F;span&gt;&lt;span&gt; 443:443 \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;nginx.vhost.conf:&#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;default.conf:ro \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-server.key:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key:ro \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-server-static-cert.pem:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem:ro \&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nginx&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; docker &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;run &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  --rm -p&lt;&#x2F;span&gt;&lt;span&gt; 443:443 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;nginx.vhost.conf:&#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;default.conf:ro \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-server.key:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key:ro \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;  -v &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pwd&lt;&#x2F;span&gt;&lt;span&gt;)&#x2F;test-server-static-cert.pem:&#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem:ro \
+&lt;&#x2F;span&gt;&lt;span&gt;  nginx
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Before we finally test this we&#x27;re going to need &lt;code&gt;dev.test&lt;&#x2F;code&gt; to point to &lt;code&gt;127.0.0.1&lt;&#x2F;code&gt;.
 If we were just testing with cur we could make use of the &lt;a href=&quot;https:&#x2F;&#x2F;curl.haxx.se&#x2F;docs&#x2F;manpage.html#--resolve&quot;&gt;&lt;code&gt;--resolve&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;
 option to manually resolve. However, we also want this to work in a browser
 so let&#x27;s add it to our hosts file.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; echo &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;127.0.0.1 dev.test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &amp;gt;&amp;gt; &#x2F;etc&#x2F;hosts&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; echo &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;127.0.0.1 dev.test&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &amp;gt;&amp;gt; &#x2F;etc&#x2F;hosts
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Finally we&#x27;re able test our certificate!&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; curl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--cacert&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem https:&#x2F;&#x2F;dev.test&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Static&lt;&#x2F;span&gt;&lt;span&gt; vhost test&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; curl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--cacert&lt;&#x2F;span&gt;&lt;span&gt; test-ca.pem https:&#x2F;&#x2F;dev.test
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Static&lt;&#x2F;span&gt;&lt;span&gt; vhost test
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;install-the-certificate-authority&quot;&gt;Install the certificate authority&lt;&#x2F;h2&gt;
 &lt;p&gt;In order to test this in a browser we need to install the CA certificate. This
@@ -557,7 +585,7 @@ servers.&lt;&#x2F;p&gt;
 		<title>Managing multiple GitHub accounts</title>
 		<published>2018-07-18T00:00:00+00:00</published>
 		<updated>2018-07-18T00:00:00+00:00</updated>
-		<link href="https://robyoung.digital/blog/multiple-github-accounts/" type="text/html"/>
+		<link rel="alternate" href="https://robyoung.digital/blog/multiple-github-accounts/" type="text/html"/>
 		<id>https://robyoung.digital/blog/multiple-github-accounts/</id>
 		<content type="html">&lt;p&gt;Authenticating correctly over SSH with multiple GitHub accounts can be a pain.
 Here is how I manage it.&lt;&#x2F;p&gt;
@@ -577,15 +605,15 @@ this was the correct one.&lt;&#x2F;p&gt;
 each offering a different key and then change the host name on the work git
 repositories to force them to use the work key.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;ssh-config&quot;&gt;&lt;code&gt;.ssh&#x2F;config&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;config&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-config &quot;&gt;&lt;code class=&quot;language-config&quot; data-lang=&quot;config&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Host &lt;&#x2F;span&gt;&lt;span&gt;github.com&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;IdentityFile &lt;&#x2F;span&gt;&lt;span&gt;~&#x2F;.ssh&#x2F;personal-ssh-key&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;config&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-config &quot;&gt;&lt;code class=&quot;language-config&quot; data-lang=&quot;config&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Host &lt;&#x2F;span&gt;&lt;span&gt;github.com
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;IdentityFile &lt;&#x2F;span&gt;&lt;span&gt;~&#x2F;.ssh&#x2F;personal-ssh-key
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Host &lt;&#x2F;span&gt;&lt;span&gt;github-work&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Hostname &lt;&#x2F;span&gt;&lt;span&gt;github.com&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;IdentityFile &lt;&#x2F;span&gt;&lt;span&gt;~&#x2F;.ssh&#x2F;work-ssh-key&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Host &lt;&#x2F;span&gt;&lt;span&gt;github-work
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Hostname &lt;&#x2F;span&gt;&lt;span&gt;github.com
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;IdentityFile &lt;&#x2F;span&gt;&lt;span&gt;~&#x2F;.ssh&#x2F;work-ssh-key
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;update-origin-host&quot;&gt;update origin host&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; git &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;config --replace-all&lt;&#x2F;span&gt;&lt;span&gt; remote.origin.url $(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; config remote.origin.url | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sed &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;s&#x2F;github.com&#x2F;github-work&#x2F;g&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; git &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;config --replace-all&lt;&#x2F;span&gt;&lt;span&gt; remote.origin.url $(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; config remote.origin.url | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sed &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;s&#x2F;github.com&#x2F;github-work&#x2F;g&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
