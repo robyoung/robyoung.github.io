@@ -120,7 +120,7 @@ board.
 {{ image(name="STM32F3-discovery.jpg", alt="STM32F3 Discovery", float="right", width=200, source="https://www.st.com/en/evaluation-tools/stm32f3discovery.html", source_name="st.com") }}
 
 If you want an STM32 based board with a debugger then getting one of the official 
-[STMicroelectronics discovery kits](https://www.st.com/en/evaluation-tools/stm32-discovery-kits.html#overview)
+[STMicroelectronics discovery kits](https://www.st.com/en/evaluation-tools/stm32-discovery-kits.html)
 is a great option (an STM32F3 or STM32F4 are good bets). The original version of the 
 [Rust Embedded Discovery book](https://docs.rust-embedded.org/discovery/) is written 
 targeting the STM32F3 discovery board so there is really high quality beginner focused 

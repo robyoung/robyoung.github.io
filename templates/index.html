@@ -35,4 +35,11 @@
 {% set latest_post = blog.pages[0] %}
 <h3><a href="{{ latest_post.path }}">{{ latest_post.title }}</a></h3>
 <time class="title" datetime="{{ latest_post.date }}">{{ latest_post.date | date(format=config.extra.date_format)}}</time>
+
+<h2><a href="/til">Today I learnt</a></h2>
+{% set blog = get_section(path="til/_index.md") %}
+{% set latest_post = blog.pages[0] %}
+<h3><a href="{{ latest_post.path }}">{{ latest_post.title }}</a></h3>
+<time class="title" datetime="{{ latest_post.date }}">{{ latest_post.date | date(format=config.extra.date_format)}}</time>
+
 {% endblock content %}

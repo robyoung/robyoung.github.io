@@ -23,3 +23,15 @@ social = [
     {title = "linkedin", url = "https://www.linkedin.com/in/robyoung101"},
 ]
 date_format = "%e %B %Y"
+
+
+[link_checker]
+
+skip_prefixes = [
+  "https://dev.test",
+  "https://www.digikey.com/en/maker/blogs/2020/understanding-stm32-naming-conventions",
+]
+
+skip_anchor_prefixes = [
+  "https://www.openssl.org/docs/manmaster/man1/x509.html",
+]

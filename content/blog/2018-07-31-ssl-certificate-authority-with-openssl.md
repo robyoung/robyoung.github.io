@@ -142,7 +142,7 @@ that CA. It's time to test them out.
 
 First let's spin up an Nginx docker container with our static certificate
 and server key. We're going to use a minimal ssl configuration, in real life
-you're going to want something [much more robust](https://wiki.mozilla.org/Security/TLS_Configurations#Nginx).
+you're going to want something [much more robust](https://wiki.mozilla.org/Security/TLS_Configurations).
 
 `nginx.vhost.conf`
 ```nginx
