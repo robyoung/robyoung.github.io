@@ -1,6 +1,8 @@
 +++
 date = 2018-07-31
 title = "Create your own certificate authority with openssl - part one"
+[taxonomies]
+topics = ["tls", "nginx"]
 +++
 This post is part one of a series on working with openssl to manage your
 own certificate authority (CA) for a couple of different use cases. If you

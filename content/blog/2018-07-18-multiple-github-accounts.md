@@ -1,6 +1,8 @@
 +++
 title = "Managing multiple GitHub accounts"
 date = 2018-07-18
+[taxonomies]
+topics = ["github"]
 +++
 Authenticating correctly over SSH with multiple GitHub accounts can be a pain.
 Here is how I manage it.

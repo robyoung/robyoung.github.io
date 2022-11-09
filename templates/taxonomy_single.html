@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+  {% for page in term.pages %}
+  <li>
+    <h2><a href="{{ page.path | safe }}">{{ page.title }}</a></h2>
+    <time class="title" datetime="{{ page.date }}">{{ page.date | date(format=config.extra.date_format) }}</time>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+  {% for term in terms %}
+  <li><a href="/{{taxonomy.slug}}/{{term.slug}}">{{term.name}} ({{term.pages|length}})</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

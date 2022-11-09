@@ -1,6 +1,8 @@
 +++
 date = 2021-08-26
 title = "First steps with Embedded Rust: Selecting a board"
+[taxonomies]
+topics = ["rust", "embedded"]
 +++
 
 # Selecting a board

@@ -1,6 +1,8 @@
 +++
 date = 2020-01-15
 title = "Create your own certificate authority with openssl - part two"
+[taxonomies]
+topics = ["tls", "nginx"]
 +++
 In the [previous post](/blog/ssl-certificate-authority-with-openssl/) we
 set up certificate authority (CA), installed a CA certificate in our browser and

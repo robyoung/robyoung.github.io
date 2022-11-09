@@ -31,7 +31,8 @@
 
     <nav>
       <ul>
-        <li class="{% if current_path is starting_with(" /blog") %}here{% endif %}"><a href="/blog">posts</a></li>
+        <li class="{% if current_path is starting_with('/blog') %}here{% endif %}"><a href="/blog">posts</a></li>
+        <li class="{% if current_path is starting_with('/topics') %}here{% endif %}"><a href="/topics">topics</a></li>
       </ul>
     </nav>
   </header>

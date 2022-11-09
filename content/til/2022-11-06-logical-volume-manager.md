@@ -1,6 +1,8 @@
 +++
 date = 2022-11-06
 title = "Logical Volume Manager"
+[taxonomies]
+topics = ["linux"]
 +++
 
 Today I used LVM (Logical Volume Manager) on a personal project for the first
