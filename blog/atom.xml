@@ -4,8 +4,16 @@
 	<link href="https://robyoung.digital/blog/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://robyoung.digital/blog/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-08-26T00:00:00+00:00</updated>
+	<updated>2022-11-06T00:00:00+00:00</updated>
 	<id>https://robyoung.digital/blog/atom.xml</id>
+	<entry xml:lang="en">
+		<title>A train lovers guide to Newcastle</title>
+		<published>2022-11-06T00:00:00+00:00</published>
+		<updated>2022-11-06T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://robyoung.digital/blog/train-lovers-guide-to-newcastle/" type="text/html"/>
+		<id>https://robyoung.digital/blog/train-lovers-guide-to-newcastle/</id>
+		<content type="html"></content>
+	</entry>
 	<entry xml:lang="en">
 		<title>First steps with Embedded Rust: Selecting a board</title>
 		<published>2021-08-26T00:00:00+00:00</published>
@@ -167,7 +175,7 @@ board.&lt;&#x2F;p&gt;
   
 &lt;&#x2F;div&gt;
 &lt;p&gt;If you want an STM32 based board with a debugger then getting one of the official 
-&lt;a href=&quot;https:&#x2F;&#x2F;www.st.com&#x2F;en&#x2F;evaluation-tools&#x2F;stm32-discovery-kits.html#overview&quot;&gt;STMicroelectronics discovery kits&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;www.st.com&#x2F;en&#x2F;evaluation-tools&#x2F;stm32-discovery-kits.html&quot;&gt;STMicroelectronics discovery kits&lt;&#x2F;a&gt;
 is a great option (an STM32F3 or STM32F4 are good bets). The original version of the 
 &lt;a href=&quot;https:&#x2F;&#x2F;docs.rust-embedded.org&#x2F;discovery&#x2F;&quot;&gt;Rust Embedded Discovery book&lt;&#x2F;a&gt; is written 
 targeting the STM32F3 discovery board so there is really high quality beginner focused 
@@ -528,7 +536,7 @@ that CA. It&#x27;s time to test them out.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;test-with-nginx-and-curl&quot;&gt;Test with Nginx and Curl&lt;&#x2F;h2&gt;
 &lt;p&gt;First let&#x27;s spin up an Nginx docker container with our static certificate
 and server key. We&#x27;re going to use a minimal ssl configuration, in real life
-you&#x27;re going to want something &lt;a href=&quot;https:&#x2F;&#x2F;wiki.mozilla.org&#x2F;Security&#x2F;TLS_Configurations#Nginx&quot;&gt;much more robust&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+you&#x27;re going to want something &lt;a href=&quot;https:&#x2F;&#x2F;wiki.mozilla.org&#x2F;Security&#x2F;TLS_Configurations&quot;&gt;much more robust&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;nginx.vhost.conf&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;nginx&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-nginx &quot;&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span&gt;server {
 &lt;&#x2F;span&gt;&lt;span&gt;  listen 443 ssl;

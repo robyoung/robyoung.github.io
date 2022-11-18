@@ -23,6 +23,10 @@
         <lastmod>2018-07-31</lastmod>
     </url>
     <url>
+        <loc>https://robyoung.digital/blog/train-lovers-guide-to-newcastle/</loc>
+        <lastmod>2022-11-06</lastmod>
+    </url>
+    <url>
         <loc>https://robyoung.digital/this-week/</loc>
     </url>
     <url>
@@ -44,5 +48,39 @@
     <url>
         <loc>https://robyoung.digital/this-week/2021-09-05/</loc>
         <lastmod>2021-09-05</lastmod>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/til/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/til/logical-volume-manager/</loc>
+        <lastmod>2022-11-06</lastmod>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/embedded/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/github/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/linux/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/newcastle/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/nginx/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/rust/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/tls/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/trains/</loc>
     </url>
 </urlset>

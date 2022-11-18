@@ -29,7 +29,7 @@
 
     <nav>
       <ul>
-        <li class="here"><a href="/blog">posts</a></li>
+        <li class=""><a href="/blog">posts</a></li>
         <li class=""><a href="/topics">topics</a></li>
       </ul>
     </nav>
@@ -37,34 +37,40 @@
 
   <section class="content">
     
+<article>
+
+<h1>Logical Volume Manager</h1>
+
+<time class="title" datetime="2022-11-06"> 6 November 2022</time>
+
+<p>Today I used LVM (Logical Volume Manager) on a personal project for the first
+time. I had come across it before and even had to use it for attaching new drives
+but I had never set it up before and so hadn't taken the time to understand it.
+So far, I love it.</p>
+<h2 id="what-is-lvm">What is LVM?</h2>
+<p>LVM is a tool for managing physical disks and filesystems. The main benefit of
+LVM is that your filesystems can be backed by multiple disks and can be freely
+resized and even moved between storage devices.</p>
+<p>There are three main concepts in LVM;</p>
+<h3 id="physical-volumes">Physical Volumes</h3>
+<p>These are the physical disks (or disk-like) devices at the very bottom.</p>
+<h3 id="volume-groups">Volume Groups</h3>
+<p>Physical volumes are grouped together into volume groups. This middle layer
+allows you to easily add and remove disks from a volume group without having
+to worry to much about which filesystems are using them.</p>
+<h3 id="logical-volumes">Logical Volumes</h3>
+<p>Volume groups are sliced up into logical volumes. These are equivalent to
+disk partitions but on steroids!</p>
+<h3 id="resources">Resources</h3>
+<p>I lot of what I read I found really confusing. As usual, DigitalOcean had
+some great resources. I should learn to search DigitalOcean first.</p>
 <ul>
-  
-  <li>
-    <h2><a href="/blog/train-lovers-guide-to-newcastle/">A train lovers guide to Newcastle</a></h2>
-    <time class="title" datetime="2022-11-06"> 6 November 2022</time>
-  </li>
-  
-  <li>
-    <h2><a href="/blog/embedded-rust-selecting-a-board/">First steps with Embedded Rust: Selecting a board</a></h2>
-    <time class="title" datetime="2021-08-26">26 August 2021</time>
-  </li>
-  
-  <li>
-    <h2><a href="/blog/ssl-certificate-authority-with-openssl-part-two/">Create your own certificate authority with openssl - part two</a></h2>
-    <time class="title" datetime="2020-01-15">15 January 2020</time>
-  </li>
-  
-  <li>
-    <h2><a href="/blog/ssl-certificate-authority-with-openssl/">Create your own certificate authority with openssl - part one</a></h2>
-    <time class="title" datetime="2018-07-31">31 July 2018</time>
-  </li>
-  
-  <li>
-    <h2><a href="/blog/multiple-github-accounts/">Managing multiple GitHub accounts</a></h2>
-    <time class="title" datetime="2018-07-18">18 July 2018</time>
-  </li>
-  
+<li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-lvm-concepts-terminology-and-operations">An Introduction to LVM Concepts, Terminology, and Operations</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-lvm-to-manage-storage-devices-on-ubuntu-18-04">How To Use LVM To Manage Storage Devices</a></li>
+<li><a href="https://linuxhandbook.com/lvm-guide/">The Complete Beginner's Guide to LVM in Linux</a></li>
 </ul>
+
+</article>
 
   </section>
 </body>
