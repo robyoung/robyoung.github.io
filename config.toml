@@ -20,6 +20,8 @@ taxonomies = [
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
 
+extra_syntaxes_and_themes = ["syntaxes"]
+
 [extra]
 social = [
     {title = "twitter", url = "https://twitter.com/roryoung"},
