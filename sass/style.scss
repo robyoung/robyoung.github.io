@@ -24,6 +24,13 @@ pre {
     overflow: auto;
 }
 
+:not(pre) > code {
+  background-color: #2b303b;
+  color: #c0c5ce;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
 body {
     color: $foreground-color;
     background-color: $background-color;
