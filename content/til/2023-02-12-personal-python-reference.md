@@ -18,3 +18,13 @@ quickly in future. It's going to start small and either grow (if it's useful) or
 - [Lexical analysis: Formatted string literals](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
 - [Format specification mini-language](https://docs.python.org/3/library/string.html#formatspec)
 
+### Comprehensions
+
+*Nested comprehensions*
+```python
+[
+  item 
+  for inner in outer
+  for item in inner
+]
+```
