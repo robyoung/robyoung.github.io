@@ -49,8 +49,24 @@
         <loc>https://robyoung.digital/til/</loc>
     </url>
     <url>
+        <loc>https://robyoung.digital/til/collapsible-sections-in-github-markdown/</loc>
+        <lastmod>2023-02-13</lastmod>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/til/linux-usb-serial/</loc>
+        <lastmod>2023-02-13</lastmod>
+    </url>
+    <url>
         <loc>https://robyoung.digital/til/logical-volume-manager/</loc>
         <lastmod>2022-11-06</lastmod>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/til/personal-python-reference/</loc>
+        <lastmod>2023-02-12</lastmod>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/til/redirect-stderr-leaving-stdout-intact/</loc>
+        <lastmod>2023-02-14</lastmod>
     </url>
     <url>
         <loc>https://robyoung.digital/topics/</loc>
@@ -66,6 +82,9 @@
     </url>
     <url>
         <loc>https://robyoung.digital/topics/nginx/</loc>
+    </url>
+    <url>
+        <loc>https://robyoung.digital/topics/python/</loc>
     </url>
     <url>
         <loc>https://robyoung.digital/topics/rust/</loc>

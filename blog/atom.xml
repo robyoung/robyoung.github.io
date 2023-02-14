@@ -377,20 +377,20 @@ options are
 &lt;a href=&quot;https:&#x2F;&#x2F;nginx.org&#x2F;en&#x2F;docs&#x2F;http&#x2F;ngx_http_ssl_module.html#ssl_trusted_certificate&quot;&gt;&lt;code&gt;ssl_trusted_certificate&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; and
 &lt;a href=&quot;https:&#x2F;&#x2F;nginx.org&#x2F;en&#x2F;docs&#x2F;http&#x2F;ngx_http_ssl_module.html#ssl_verify_client&quot;&gt;&lt;code&gt;ssl_verify_client&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;nginx.vhost.conf&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;nginx&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-nginx &quot;&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span&gt;server {
-&lt;&#x2F;span&gt;&lt;span&gt;  listen 443 ssl;
+&lt;pre data-lang=&quot;nginx&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-nginx &quot;&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;server&lt;&#x2F;span&gt;&lt;span&gt; {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;listen &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;443&lt;&#x2F;span&gt;&lt;span&gt; ssl;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  server_name dev.test;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;server_name&lt;&#x2F;span&gt;&lt;span&gt; dev.test;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_client_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;test-ca.pem;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_verify_client on;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;ssl_client_certificate&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;test-ca.pem;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;ssl_verify_client&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt; on&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate_key &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;ssl_certificate&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;ssl_certificate_key&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  location &#x2F; {
-&lt;&#x2F;span&gt;&lt;span&gt;    return 200 &amp;#39;Static vhost test\n&amp;#39;;
-&lt;&#x2F;span&gt;&lt;span&gt;    add_header Content-Type text&#x2F;plain;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;location &lt;&#x2F;span&gt;&lt;span&gt;&#x2F; {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;200 &amp;#39;Static vhost test\n&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;add_header&lt;&#x2F;span&gt;&lt;span&gt; Content-Type text&#x2F;plain;
 &lt;&#x2F;span&gt;&lt;span&gt;  }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -530,17 +530,17 @@ that CA. It&#x27;s time to test them out.&lt;&#x2F;p&gt;
 and server key. We&#x27;re going to use a minimal ssl configuration, in real life
 you&#x27;re going to want something &lt;a href=&quot;https:&#x2F;&#x2F;wiki.mozilla.org&#x2F;Security&#x2F;TLS_Configurations&quot;&gt;much more robust&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;nginx.vhost.conf&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;nginx&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-nginx &quot;&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span&gt;server {
-&lt;&#x2F;span&gt;&lt;span&gt;  listen 443 ssl;
+&lt;pre data-lang=&quot;nginx&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-nginx &quot;&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;server&lt;&#x2F;span&gt;&lt;span&gt; {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;listen &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;443&lt;&#x2F;span&gt;&lt;span&gt; ssl;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  server_name dev.test;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;server_name&lt;&#x2F;span&gt;&lt;span&gt; dev.test;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem;
-&lt;&#x2F;span&gt;&lt;span&gt;  ssl_certificate_key &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;ssl_certificate&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;certs&#x2F;server-crt.pem;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;ssl_certificate_key&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;private&#x2F;server.key;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  location &#x2F; {
-&lt;&#x2F;span&gt;&lt;span&gt;    return 200 &amp;#39;Static vhost test\n&amp;#39;;
-&lt;&#x2F;span&gt;&lt;span&gt;    add_header Content-Type text&#x2F;plain;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;location &lt;&#x2F;span&gt;&lt;span&gt;&#x2F; {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;200 &amp;#39;Static vhost test\n&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;add_header&lt;&#x2F;span&gt;&lt;span&gt; Content-Type text&#x2F;plain;
 &lt;&#x2F;span&gt;&lt;span&gt;  }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;

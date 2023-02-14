@@ -109,20 +109,20 @@ options are
 <a href="https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_trusted_certificate"><code>ssl_trusted_certificate</code></a> and
 <a href="https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_verify_client"><code>ssl_verify_client</code></a>.</p>
 <p><code>nginx.vhost.conf</code></p>
-<pre data-lang="nginx" style="background-color:#2b303b;color:#c0c5ce;" class="language-nginx "><code class="language-nginx" data-lang="nginx"><span>server {
-</span><span>  listen 443 ssl;
+<pre data-lang="nginx" style="background-color:#2b303b;color:#c0c5ce;" class="language-nginx "><code class="language-nginx" data-lang="nginx"><span style="color:#b48ead;">server</span><span> {
+</span><span>  </span><span style="color:#b48ead;">listen </span><span style="color:#a3be8c;">443</span><span> ssl;
 </span><span>
-</span><span>  server_name dev.test;
+</span><span>  </span><span style="color:#b48ead;">server_name</span><span> dev.test;
 </span><span>
-</span><span>  ssl_client_certificate /etc/nginx/ssl/certs/test-ca.pem;
-</span><span>  ssl_verify_client on;
+</span><span>  </span><span style="color:#b48ead;">ssl_client_certificate</span><span> /etc/nginx/ssl/certs/test-ca.pem;
+</span><span>  </span><span style="color:#b48ead;">ssl_verify_client</span><span style="color:#d08770;"> on</span><span>;
 </span><span>
-</span><span>  ssl_certificate /etc/nginx/ssl/certs/server-crt.pem;
-</span><span>  ssl_certificate_key /etc/nginx/ssl/private/server.key;
+</span><span>  </span><span style="color:#b48ead;">ssl_certificate</span><span> /etc/nginx/ssl/certs/server-crt.pem;
+</span><span>  </span><span style="color:#b48ead;">ssl_certificate_key</span><span> /etc/nginx/ssl/private/server.key;
 </span><span>
-</span><span>  location / {
-</span><span>    return 200 &#39;Static vhost test\n&#39;;
-</span><span>    add_header Content-Type text/plain;
+</span><span>  </span><span style="color:#b48ead;">location </span><span>/ {
+</span><span>    </span><span style="color:#96b5b4;">return </span><span style="color:#a3be8c;">200 &#39;Static vhost test\n&#39;</span><span>;
+</span><span>    </span><span style="color:#b48ead;">add_header</span><span> Content-Type text/plain;
 </span><span>  }
 </span><span>}
 </span></code></pre>

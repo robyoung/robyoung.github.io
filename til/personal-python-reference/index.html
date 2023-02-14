@@ -30,26 +30,40 @@
     <nav>
       <ul>
         <li class=""><a href="/blog">posts</a></li>
-        <li class="here"><a href="/topics">topics</a></li>
+        <li class=""><a href="/topics">topics</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="content">
     
+<article>
+
+<h1>Personal Python Reference</h1>
+
+<time class="title" datetime="2023-02-12">12 February 2023</time>
+
+<p>I use Python most days but often find myself hunting out the same bits of documentation.
+The goal of this page is to be a reference of those nuggets so that I can find them more
+quickly in future. It's going to start small and either grow (if it's useful) or go away
+(if it is not).</p>
+<h2 id="python">Python</h2>
+<h3 id="f-strings">f-strings</h3>
 <ul>
-  
-  <li>
-    <h2><a href="/til/collapsible-sections-in-github-markdown/">Collapsible sections in GitHub markdown</a></h2>
-    <time class="title" datetime="2023-02-13">13 February 2023</time>
-  </li>
-  
-  <li>
-    <h2><a href="/blog/multiple-github-accounts/">Managing multiple GitHub accounts</a></h2>
-    <time class="title" datetime="2018-07-18">18 July 2018</time>
-  </li>
-  
+<li><a href="https://fstring.help/cheat/">f-string cheat sheet</a></li>
+<li><a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings">Lexical analysis: Formatted string literals</a></li>
+<li><a href="https://docs.python.org/3/library/string.html#formatspec">Format specification mini-language</a></li>
 </ul>
+<h3 id="comprehensions">Comprehensions</h3>
+<p><em>Nested comprehensions</em></p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>[
+</span><span>  item 
+</span><span>  </span><span style="color:#b48ead;">for </span><span>inner </span><span style="color:#b48ead;">in </span><span>outer
+</span><span>  </span><span style="color:#b48ead;">for </span><span>item </span><span style="color:#b48ead;">in </span><span>inner
+</span><span>]
+</span></code></pre>
+
+</article>
 
   </section>
 </body>

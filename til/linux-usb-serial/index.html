@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rob Young | digital</title>
+
+  <meta charset="utf-8" lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+  <link href="/style.css" rel="stylesheet">
+  <link rel="alternate" type="application/atom+xml" href="/atom.xml" />
+  <link
+    href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAIAAAADAAAAAwADAAQAAwAXFhUAAQABAAIAAQADAAEABAABAAIBAAAEAQMAAQACAAIAAgADAAIAAgEBAAMBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAggBAAgICQcJCAgICgkIDAcGBwICAgIJCQgICAkIAw8HCAcDCAIIAQgICQIJAgIJCAIHCAIQAggCEAEICAIDAwEICAIBAAIJAgIDAwMICgkJAggJCAgICAkJAggQAwIJCAgCAgIJAgEIAgEBCQMICgEIAgICAggJBwECAg8IEAQCCAgHCQIIAgIIEAgDCAgJCAEBAAgCEQICAQECAgIJBwgBCAcBAQgCCAEABwECCQIIAggCCAgIAggCBwICCQcDAgMCCAIBAwICAQMJCQkJCgMHBwgCAgICAggLEAgIAggICA8IDQkODwgJAgkJDw8FCAgCEAgICAgIDggCCQ4PCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+    rel="icon" type="image/x-icon">
+
+  
+
+  <script defer data-domain="robyoung.digital" src="https://plausible.io/js/plausible.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <a class="site-header" href="/">Rob Young | <strong>digital</strong></a>
+
+    <div class="filler"></div>
+
+    <nav>
+      <ul>
+        <li class=""><a href="/blog">posts</a></li>
+        <li class=""><a href="/topics">topics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content">
+    
+<article>
+
+<h1>USB Serial on Linux</h1>
+
+<time class="title" datetime="2023-02-13">13 February 2023</time>
+
+<p>This documents my journey to getting a USB serial adapter working
+on Linux so that I can flash <a href="https://sonoff.tech/product/diy-smart-switches/basicr2/">Sonoff Basic R2</a>
+with <a href="https://esphome.io/">ESPHome</a>. I had a cheap one based on a CH340G
+hanging around that I could not get working so I forked out for one based on 
+a a FTDI FT232RL which seemed to work out of the box.</p>
+<h2 id="see-what-s-going-on">See what's going on</h2>
+<p>Let's look at <code>lsusb</code> and <code>dmesg</code> and see what we get when the CH340G adapter is plugged in.</p>
+<p><em>dmesg</em></p>
+<pre data-lang="dmesg" style="background-color:#2b303b;color:#c0c5ce;" class="language-dmesg "><code class="language-dmesg" data-lang="dmesg"><span>[ 2898.744517] usb 3-8.3: new full-speed USB device number 12 using xhci_hcd
+</span><span>[ 2898.894344] usb 3-8.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.63
+</span><span>[ 2898.894353] usb 3-8.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+</span><span>[ 2898.894356] usb 3-8.3: Product: USB2.0-Serial
+</span><span>[ 2898.903026] ch341 3-8.3:1.0: ch341-uart converter detected
+</span><span>[ 2898.904184] usb 3-8.3: ch341-uart converter now attached to ttyUSB0
+</span></code></pre>
+<p><em>lsusb</em></p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>*snip*
+</span><span>Bus 003 Device 015: ID 1a86:7523 QinHeng Electronics CH340 serial converter
+</span><span>*snip*
+</span></code></pre>
+<p>That looks promising. It's detected and recognised as a USB Serial Device. But hang on
+a minute, almost immediately after we get.</p>
+<pre data-lang="dmesg" style="background-color:#2b303b;color:#c0c5ce;" class="language-dmesg "><code class="language-dmesg" data-lang="dmesg"><span>[ 2899.501293] input: BRLTTY 6.4 Linux Screen Driver Keyboard as /devices/virtual/input/input35
+</span><span>[ 2899.502800] usb 3-8.3: usbfs: interface 0 claimed by ch341 while &#39;brltty&#39; sets config #1
+</span><span>[ 2899.503336] ch341-uart ttyUSB0: ch341-uart converter now disconnected from ttyUSB0
+</span><span>[ 2899.503352] ch341 3-8.3:1.0: device disconnected
+</span></code></pre>
+<p>It looks like the device get's disconnected by <a href="https://brltty.app/">brltty</a>, which is apparently
+a daemon for interfacing with a refreshable braille display. Thankfully I'm not blind and don't need
+a braille display, so what's going on here. A little searching and I found <a href="https://unix.stackexchange.com/a/670637">this
+Stack Exchange answer</a> that confirms it is indeed a problem.</p>
+<p>But hang on a minute. If I plug the FTDI device in it does not seem to be disconnected.</p>
+<details>
+  <summary>dmesg output from connecting the FTDI adapter</summary>
+<pre data-lang="dmesg" style="background-color:#2b303b;color:#c0c5ce;" class="language-dmesg "><code class="language-dmesg" data-lang="dmesg"><span>[ 3205.419824] usb 3-8.3: USB disconnect, device number 12
+</span><span>[ 3208.506882] usb 3-8.3: new full-speed USB device number 13 using xhci_hcd
+</span><span>[ 3208.663598] usb 3-8.3: New USB device found, idVendor=0403, idProduct=6001, bcdDevice= 6.00
+</span><span>[ 3208.663608] usb 3-8.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+</span><span>[ 3208.663611] usb 3-8.3: Product: FT232R USB UART
+</span><span>[ 3208.663613] usb 3-8.3: Manufacturer: FTDI
+</span><span>[ 3208.663616] usb 3-8.3: SerialNumber: AQ027NY5
+</span><span>[ 3208.672641] ftdi_sio 3-8.3:1.0: FTDI USB Serial Device converter detected
+</span><span>[ 3208.672689] usb 3-8.3: Detected FT232RL
+</span><span>[ 3208.673439] usb 3-8.3: FTDI USB Serial Device converter now attached to ttyUSB0
+</span></code></pre>
+</details>
+<p>Until I plug the CH340G in, and then both get disconnected (and incidentally my X keyboard config is lost as well).</p>
+<details>
+  <summary>both adapters being disconnected by BRLTTY</summary>
+<pre data-lang="dmesg" style="background-color:#2b303b;color:#c0c5ce;" class="language-dmesg "><code class="language-dmesg" data-lang="dmesg"><span>[ 3282.474013] input: BRLTTY 6.4 Linux Screen Driver Keyboard as /devices/virtual/input/input36
+</span><span>[ 3282.476515] usb 3-8.1: usbfs: interface 0 claimed by ch341 while &#39;brltty&#39; sets config #1
+</span><span>[ 3282.477350] ch341-uart ttyUSB1: ch341-uart converter now disconnected from ttyUSB1
+</span><span>[ 3282.477381] ch341 3-8.1:1.0: device disconnected
+</span><span>[ 3283.642093] usb 3-8.3: usbfs: interface 0 claimed by ftdi_sio while &#39;brltty&#39; sets config #1
+</span><span>[ 3283.643357] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0
+</span><span>[ 3283.643383] ftdi_sio 3-8.3:1.0: device disconnected
+</span></code></pre>
+</details>
+<h2 id="fix-the-brltty-issue">Fix the BRLTTY issue</h2>
+<p>It looks like there are a couple of solutions to the problem. I went with
+<a href="https://unix.stackexchange.com/a/680547">this less aggressive approach</a>, just commenting
+out the offending udev rule in <code>/usr/lib/udev/rules.d/*-brltty-device.rules</code>.</p>
+<p>I did also take <a href="https://unix.stackexchange.com/questions/670636/unable-to-use-usb-dongle-based-on-usb-serial-converter-chip#comment1264526_670637">this users advice</a>
+and removed <code>modemmanager</code> as I don't need it on my laptop and don't fancy any more surprises.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.cyberciti.biz/faq/find-out-linux-serial-ports-with-setserial/">How to check and use serial ports under linux</a></li>
+</ul>
+
+</article>
+
+  </section>
+</body>
+
+</html>

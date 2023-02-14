@@ -54,14 +54,23 @@ resized and even moved between storage devices.</p>
 <p>There are three main concepts in LVM;</p>
 <h3 id="physical-volumes">Physical Volumes</h3>
 <p>These are the physical disks (or disk-like) devices at the very bottom.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># List physical volumes
+</span><span style="color:#bf616a;">sudo</span><span> pvs
+</span></code></pre>
 <h3 id="volume-groups">Volume Groups</h3>
 <p>Physical volumes are grouped together into volume groups. This middle layer
 allows you to easily add and remove disks from a volume group without having
 to worry to much about which filesystems are using them.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># List volume groups
+</span><span style="color:#bf616a;">sudo</span><span> vgs
+</span></code></pre>
 <h3 id="logical-volumes">Logical Volumes</h3>
 <p>Volume groups are sliced up into logical volumes. These are equivalent to
 disk partitions but on steroids!</p>
-<h3 id="resources">Resources</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># List logical volumes
+</span><span style="color:#bf616a;">sudo</span><span> lvs
+</span></code></pre>
+<h2 id="resources">Resources</h2>
 <p>I lot of what I read I found really confusing. As usual, DigitalOcean had
 some great resources. I should learn to search DigitalOcean first.</p>
 <ul>
@@ -69,6 +78,10 @@ some great resources. I should learn to search DigitalOcean first.</p>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-lvm-to-manage-storage-devices-on-ubuntu-18-04">How To Use LVM To Manage Storage Devices</a></li>
 <li><a href="https://linuxhandbook.com/lvm-guide/">The Complete Beginner's Guide to LVM in Linux</a></li>
 </ul>
+<h2 id="useful-related-commands">Useful related commands</h2>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># lists block devices. Always useful as a first step to see what is there.
+</span><span style="color:#bf616a;">sudo</span><span> lsblk
+</span></code></pre>
 
 </article>
 

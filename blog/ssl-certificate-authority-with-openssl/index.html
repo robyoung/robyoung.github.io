@@ -152,17 +152,17 @@ that CA. It's time to test them out.</p>
 and server key. We're going to use a minimal ssl configuration, in real life
 you're going to want something <a href="https://wiki.mozilla.org/Security/TLS_Configurations">much more robust</a>.</p>
 <p><code>nginx.vhost.conf</code></p>
-<pre data-lang="nginx" style="background-color:#2b303b;color:#c0c5ce;" class="language-nginx "><code class="language-nginx" data-lang="nginx"><span>server {
-</span><span>  listen 443 ssl;
+<pre data-lang="nginx" style="background-color:#2b303b;color:#c0c5ce;" class="language-nginx "><code class="language-nginx" data-lang="nginx"><span style="color:#b48ead;">server</span><span> {
+</span><span>  </span><span style="color:#b48ead;">listen </span><span style="color:#a3be8c;">443</span><span> ssl;
 </span><span>
-</span><span>  server_name dev.test;
+</span><span>  </span><span style="color:#b48ead;">server_name</span><span> dev.test;
 </span><span>
-</span><span>  ssl_certificate /etc/nginx/ssl/certs/server-crt.pem;
-</span><span>  ssl_certificate_key /etc/nginx/ssl/private/server.key;
+</span><span>  </span><span style="color:#b48ead;">ssl_certificate</span><span> /etc/nginx/ssl/certs/server-crt.pem;
+</span><span>  </span><span style="color:#b48ead;">ssl_certificate_key</span><span> /etc/nginx/ssl/private/server.key;
 </span><span>
-</span><span>  location / {
-</span><span>    return 200 &#39;Static vhost test\n&#39;;
-</span><span>    add_header Content-Type text/plain;
+</span><span>  </span><span style="color:#b48ead;">location </span><span>/ {
+</span><span>    </span><span style="color:#96b5b4;">return </span><span style="color:#a3be8c;">200 &#39;Static vhost test\n&#39;</span><span>;
+</span><span>    </span><span style="color:#b48ead;">add_header</span><span> Content-Type text/plain;
 </span><span>  }
 </span><span>}
 </span></code></pre>

@@ -30,26 +30,24 @@
     <nav>
       <ul>
         <li class=""><a href="/blog">posts</a></li>
-        <li class="here"><a href="/topics">topics</a></li>
+        <li class=""><a href="/topics">topics</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="content">
     
-<ul>
-  
-  <li>
-    <h2><a href="/til/collapsible-sections-in-github-markdown/">Collapsible sections in GitHub markdown</a></h2>
-    <time class="title" datetime="2023-02-13">13 February 2023</time>
-  </li>
-  
-  <li>
-    <h2><a href="/blog/multiple-github-accounts/">Managing multiple GitHub accounts</a></h2>
-    <time class="title" datetime="2018-07-18">18 July 2018</time>
-  </li>
-  
-</ul>
+<article>
+
+<h1>Redirect stderr leaving stdout intact</h1>
+
+<time class="title" datetime="2023-02-14">14 February 2023</time>
+
+<p>This is a great little trick for redirecting stderr to another program while leaving stdout intact.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">some-command </span><span style="color:#d08770;">2</span><span>&gt; &gt;( </span><span style="color:#bf616a;">tee -a</span><span> stderr.log &gt;&amp;</span><span style="color:#d08770;">2 </span><span>)
+</span></code></pre>
+
+</article>
 
   </section>
 </body>
