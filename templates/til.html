@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block rss %}
+  <link rel="alternate" type="application/atom+xml" href="/til/atom.xml" />
+{% endblock %}
+
 {% block content %}
 <p>Things I learnt or things I often forget and would like a reference for.</p>
 

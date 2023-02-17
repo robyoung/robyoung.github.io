@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% if section.path == "/til/" %}
+{% block rss %}
+  <link rel="alternate" type="application/atom+xml" href="/til/atom.xml" />
+{% endblock %}
+{% endif %}
+
 {% block content %}
 <article>
 {% if page.draft %}
