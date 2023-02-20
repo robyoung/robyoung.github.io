@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Rob Young | Digital - today I leart</title>
+	<link href="https://robyoung.digital/til/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://robyoung.digital/til/"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-02-14T00:00:00+00:00</updated>
+	<id>https://robyoung.digital/til/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Filter JSON lines</title>
+		<published>2023-02-14T00:00:00+00:00</published>
+		<updated>2023-02-14T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://robyoung.digital/til/filter-json-lines/" type="text/html"/>
+		<id>https://robyoung.digital/til/filter-json-lines/</id>
+		<content type="html">&lt;p&gt;Today I learnt how to use &lt;a href=&quot;https:&#x2F;&#x2F;stedolan.github.io&#x2F;jq&#x2F;&quot;&gt;jq&lt;&#x2F;a&gt; to filter &lt;a href=&quot;https:&#x2F;&#x2F;jsonlines.org&#x2F;&quot;&gt;JSON lines&lt;&#x2F;a&gt;
+file returning the whole object of each line.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cat&lt;&#x2F;span&gt;&lt;span&gt; json-lines.json | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;jq &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;if (.name == &amp;quot;something&amp;quot;) then . else empty end&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I have a love hate relationship with jq. It is so useful for simple things but I find the language so confusing
+for more complex use cases and I find the documentation pretty impenetrable.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Redirect stderr leaving stdout intact</title>
+		<published>2023-02-14T00:00:00+00:00</published>
+		<updated>2023-02-14T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://robyoung.digital/til/redirect-stderr-leaving-stdout-intact/" type="text/html"/>
+		<id>https://robyoung.digital/til/redirect-stderr-leaving-stdout-intact/</id>
+		<content type="html">&lt;p&gt;This is a great little trick for redirecting stderr to another program while leaving stdout intact.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;some-command &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &amp;gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tee -a&lt;&#x2F;span&gt;&lt;span&gt; stderr.log &amp;gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Collapsible sections in GitHub markdown</title>
+		<published>2023-02-13T00:00:00+00:00</published>
+		<updated>2023-02-13T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://robyoung.digital/til/collapsible-sections-in-github-markdown/" type="text/html"/>
+		<id>https://robyoung.digital/til/collapsible-sections-in-github-markdown/</id>
+		<content type="html">&lt;p&gt;I didn&#x27;t learn this trick today and I rarely need it. However, whenever I do 
+I have to hunt out an issue or pull request where I have used it before.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;&#x2F;h2&gt;
+&lt;p&gt;I want a collapsible section within some GitHub markdown.&lt;&#x2F;p&gt;
+&lt;details&gt;
+  &lt;summary&gt;like this&lt;&#x2F;summary&gt;
+&lt;p&gt;To hide a larger block of text like this. Maybe because it has a big noisy
+block of code or maybe because it will only be relevant to some people.&lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;&#x2F;h2&gt;
+&lt;p&gt;Just drop the same code I used above straight into the text block.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;summary&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;like this&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;summary&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;To hide a larger block of text like this. Maybe because it has a big noisy
+&lt;&#x2F;span&gt;&lt;span&gt;block of code or maybe because it will only be relevant to some people.
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>USB Serial on Linux</title>
+		<published>2023-02-13T00:00:00+00:00</published>
+		<updated>2023-02-13T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://robyoung.digital/til/linux-usb-serial/" type="text/html"/>
+		<id>https://robyoung.digital/til/linux-usb-serial/</id>
+		<content type="html">&lt;p&gt;This documents my journey to getting a USB serial adapter working
+on Linux so that I can flash &lt;a href=&quot;https:&#x2F;&#x2F;sonoff.tech&#x2F;product&#x2F;diy-smart-switches&#x2F;basicr2&#x2F;&quot;&gt;Sonoff Basic R2&lt;&#x2F;a&gt;
+with &lt;a href=&quot;https:&#x2F;&#x2F;esphome.io&#x2F;&quot;&gt;ESPHome&lt;&#x2F;a&gt;. I had a cheap one based on a CH340G
+hanging around that I could not get working so I forked out for one based on 
+a a FTDI FT232RL which seemed to work out of the box.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;see-what-s-going-on&quot;&gt;See what&#x27;s going on&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s look at &lt;code&gt;lsusb&lt;&#x2F;code&gt; and &lt;code&gt;dmesg&lt;&#x2F;code&gt; and see what we get when the CH340G adapter is plugged in.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;dmesg&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;dmesg&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-dmesg &quot;&gt;&lt;code class=&quot;language-dmesg&quot; data-lang=&quot;dmesg&quot;&gt;&lt;span&gt;[ 2898.744517] usb 3-8.3: new full-speed USB device number 12 using xhci_hcd
+&lt;&#x2F;span&gt;&lt;span&gt;[ 2898.894344] usb 3-8.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.63
+&lt;&#x2F;span&gt;&lt;span&gt;[ 2898.894353] usb 3-8.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+&lt;&#x2F;span&gt;&lt;span&gt;[ 2898.894356] usb 3-8.3: Product: USB2.0-Serial
+&lt;&#x2F;span&gt;&lt;span&gt;[ 2898.903026] ch341 3-8.3:1.0: ch341-uart converter detected
+&lt;&#x2F;span&gt;&lt;span&gt;[ 2898.904184] usb 3-8.3: ch341-uart converter now attached to ttyUSB0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;em&gt;lsusb&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;*snip*
+&lt;&#x2F;span&gt;&lt;span&gt;Bus 003 Device 015: ID 1a86:7523 QinHeng Electronics CH340 serial converter
+&lt;&#x2F;span&gt;&lt;span&gt;*snip*
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That looks promising. It&#x27;s detected and recognised as a USB Serial Device. But hang on
+a minute, almost immediately after we get.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;dmesg&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-dmesg &quot;&gt;&lt;code class=&quot;language-dmesg&quot; data-lang=&quot;dmesg&quot;&gt;&lt;span&gt;[ 2899.501293] input: BRLTTY 6.4 Linux Screen Driver Keyboard as &#x2F;devices&#x2F;virtual&#x2F;input&#x2F;input35
+&lt;&#x2F;span&gt;&lt;span&gt;[ 2899.502800] usb 3-8.3: usbfs: interface 0 claimed by ch341 while &amp;#39;brltty&amp;#39; sets config #1
+&lt;&#x2F;span&gt;&lt;span&gt;[ 2899.503336] ch341-uart ttyUSB0: ch341-uart converter now disconnected from ttyUSB0
+&lt;&#x2F;span&gt;&lt;span&gt;[ 2899.503352] ch341 3-8.3:1.0: device disconnected
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;It looks like the device get&#x27;s disconnected by &lt;a href=&quot;https:&#x2F;&#x2F;brltty.app&#x2F;&quot;&gt;brltty&lt;&#x2F;a&gt;, which is apparently
+a daemon for interfacing with a refreshable braille display. Thankfully I&#x27;m not blind and don&#x27;t need
+a braille display, so what&#x27;s going on here. A little searching and I found &lt;a href=&quot;https:&#x2F;&#x2F;unix.stackexchange.com&#x2F;a&#x2F;670637&quot;&gt;this
+Stack Exchange answer&lt;&#x2F;a&gt; that confirms it is indeed a problem.&lt;&#x2F;p&gt;
+&lt;p&gt;But hang on a minute. If I plug the FTDI device in it does not seem to be disconnected.&lt;&#x2F;p&gt;
+&lt;details&gt;
+  &lt;summary&gt;dmesg output from connecting the FTDI adapter&lt;&#x2F;summary&gt;
+&lt;pre data-lang=&quot;dmesg&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-dmesg &quot;&gt;&lt;code class=&quot;language-dmesg&quot; data-lang=&quot;dmesg&quot;&gt;&lt;span&gt;[ 3205.419824] usb 3-8.3: USB disconnect, device number 12
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3208.506882] usb 3-8.3: new full-speed USB device number 13 using xhci_hcd
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3208.663598] usb 3-8.3: New USB device found, idVendor=0403, idProduct=6001, bcdDevice= 6.00
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3208.663608] usb 3-8.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3208.663611] usb 3-8.3: Product: FT232R USB UART
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3208.663613] usb 3-8.3: Manufacturer: FTDI
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3208.663616] usb 3-8.3: SerialNumber: AQ027NY5
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3208.672641] ftdi_sio 3-8.3:1.0: FTDI USB Serial Device converter detected
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3208.672689] usb 3-8.3: Detected FT232RL
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3208.673439] usb 3-8.3: FTDI USB Serial Device converter now attached to ttyUSB0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;details&gt;
+&lt;p&gt;Until I plug the CH340G in, and then both get disconnected (and incidentally my X keyboard config is lost as well).&lt;&#x2F;p&gt;
+&lt;details&gt;
+  &lt;summary&gt;both adapters being disconnected by BRLTTY&lt;&#x2F;summary&gt;
+&lt;pre data-lang=&quot;dmesg&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-dmesg &quot;&gt;&lt;code class=&quot;language-dmesg&quot; data-lang=&quot;dmesg&quot;&gt;&lt;span&gt;[ 3282.474013] input: BRLTTY 6.4 Linux Screen Driver Keyboard as &#x2F;devices&#x2F;virtual&#x2F;input&#x2F;input36
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3282.476515] usb 3-8.1: usbfs: interface 0 claimed by ch341 while &amp;#39;brltty&amp;#39; sets config #1
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3282.477350] ch341-uart ttyUSB1: ch341-uart converter now disconnected from ttyUSB1
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3282.477381] ch341 3-8.1:1.0: device disconnected
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3283.642093] usb 3-8.3: usbfs: interface 0 claimed by ftdi_sio while &amp;#39;brltty&amp;#39; sets config #1
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3283.643357] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0
+&lt;&#x2F;span&gt;&lt;span&gt;[ 3283.643383] ftdi_sio 3-8.3:1.0: device disconnected
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;details&gt;
+&lt;h2 id=&quot;fix-the-brltty-issue&quot;&gt;Fix the BRLTTY issue&lt;&#x2F;h2&gt;
+&lt;p&gt;It looks like there are a couple of solutions to the problem. I went with
+&lt;a href=&quot;https:&#x2F;&#x2F;unix.stackexchange.com&#x2F;a&#x2F;680547&quot;&gt;this less aggressive approach&lt;&#x2F;a&gt;, just commenting
+out the offending udev rule in &lt;code&gt;&#x2F;usr&#x2F;lib&#x2F;udev&#x2F;rules.d&#x2F;*-brltty-device.rules&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I did also take &lt;a href=&quot;https:&#x2F;&#x2F;unix.stackexchange.com&#x2F;questions&#x2F;670636&#x2F;unable-to-use-usb-dongle-based-on-usb-serial-converter-chip#comment1264526_670637&quot;&gt;this users advice&lt;&#x2F;a&gt;
+and removed &lt;code&gt;modemmanager&lt;&#x2F;code&gt; as I don&#x27;t need it on my laptop and don&#x27;t fancy any more surprises.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cyberciti.biz&#x2F;faq&#x2F;find-out-linux-serial-ports-with-setserial&#x2F;&quot;&gt;How to check and use serial ports under linux&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Personal Python Reference</title>
+		<published>2023-02-12T00:00:00+00:00</published>
+		<updated>2023-02-12T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://robyoung.digital/til/personal-python-reference/" type="text/html"/>
+		<id>https://robyoung.digital/til/personal-python-reference/</id>
+		<content type="html">&lt;p&gt;I use Python most days but often find myself hunting out the same bits of documentation.
+The goal of this page is to be a reference of those nuggets so that I can find them more
+quickly in future. It&#x27;s going to start small and either grow (if it&#x27;s useful) or go away
+(if it is not).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;python&quot;&gt;Python&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;f-strings&quot;&gt;f-strings&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fstring.help&#x2F;cheat&#x2F;&quot;&gt;f-string cheat sheet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;reference&#x2F;lexical_analysis.html#f-strings&quot;&gt;Lexical analysis: Formatted string literals&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;string.html#formatspec&quot;&gt;Format specification mini-language&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;comprehensions&quot;&gt;Comprehensions&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;em&gt;Nested comprehensions&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;[
+&lt;&#x2F;span&gt;&lt;span&gt;  item 
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;inner &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;outer
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;inner
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Logical Volume Manager</title>
+		<published>2022-11-06T00:00:00+00:00</published>
+		<updated>2022-11-06T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://robyoung.digital/til/logical-volume-manager/" type="text/html"/>
+		<id>https://robyoung.digital/til/logical-volume-manager/</id>
+		<content type="html">&lt;p&gt;Today I used LVM (Logical Volume Manager) on a personal project for the first
+time. I had come across it before and even had to use it for attaching new drives
+but I had never set it up before and so hadn&#x27;t taken the time to understand it.
+So far, I love it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-lvm&quot;&gt;What is LVM?&lt;&#x2F;h2&gt;
+&lt;p&gt;LVM is a tool for managing physical disks and filesystems. The main benefit of
+LVM is that your filesystems can be backed by multiple disks and can be freely
+resized and even moved between storage devices.&lt;&#x2F;p&gt;
+&lt;p&gt;There are three main concepts in LVM;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;physical-volumes&quot;&gt;Physical Volumes&lt;&#x2F;h3&gt;
+&lt;p&gt;These are the physical disks (or disk-like) devices at the very bottom.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# List physical volumes
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; pvs
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;volume-groups&quot;&gt;Volume Groups&lt;&#x2F;h3&gt;
+&lt;p&gt;Physical volumes are grouped together into volume groups. This middle layer
+allows you to easily add and remove disks from a volume group without having
+to worry to much about which filesystems are using them.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# List volume groups
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; vgs
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;logical-volumes&quot;&gt;Logical Volumes&lt;&#x2F;h3&gt;
+&lt;p&gt;Volume groups are sliced up into logical volumes. These are equivalent to
+disk partitions but on steroids!&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# List logical volumes
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; lvs
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;p&gt;I lot of what I read I found really confusing. As usual, DigitalOcean had
+some great resources. I should learn to search DigitalOcean first.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.digitalocean.com&#x2F;community&#x2F;tutorials&#x2F;an-introduction-to-lvm-concepts-terminology-and-operations&quot;&gt;An Introduction to LVM Concepts, Terminology, and Operations&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.digitalocean.com&#x2F;community&#x2F;tutorials&#x2F;how-to-use-lvm-to-manage-storage-devices-on-ubuntu-18-04&quot;&gt;How To Use LVM To Manage Storage Devices&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;linuxhandbook.com&#x2F;lvm-guide&#x2F;&quot;&gt;The Complete Beginner&#x27;s Guide to LVM in Linux&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;useful-related-commands&quot;&gt;Useful related commands&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# lists block devices. Always useful as a first step to see what is there.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; lsblk
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+</feed>

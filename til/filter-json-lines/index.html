@@ -30,31 +30,27 @@
     <nav>
       <ul>
         <li class=""><a href="/blog">posts</a></li>
-        <li class="here"><a href="/topics">topics</a></li>
+        <li class=""><a href="/topics">topics</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="content">
     
-<ul>
-  
-  <li>
-    <h2><a href="/til/redirect-stderr-leaving-stdout-intact/">Redirect stderr leaving stdout intact</a></h2>
-    <time class="title" datetime="2023-02-14">14 February 2023</time>
-  </li>
-  
-  <li>
-    <h2><a href="/til/linux-usb-serial/">USB Serial on Linux</a></h2>
-    <time class="title" datetime="2023-02-13">13 February 2023</time>
-  </li>
-  
-  <li>
-    <h2><a href="/til/logical-volume-manager/">Logical Volume Manager</a></h2>
-    <time class="title" datetime="2022-11-06"> 6 November 2022</time>
-  </li>
-  
-</ul>
+<article>
+
+<h1>Filter JSON lines</h1>
+
+<time class="title" datetime="2023-02-14">14 February 2023</time>
+
+<p>Today I learnt how to use <a href="https://stedolan.github.io/jq/">jq</a> to filter <a href="https://jsonlines.org/">JSON lines</a>
+file returning the whole object of each line.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cat</span><span> json-lines.json | </span><span style="color:#bf616a;">jq </span><span>&#39;</span><span style="color:#a3be8c;">if (.name == &quot;something&quot;) then . else empty end</span><span>&#39;
+</span></code></pre>
+<p>I have a love hate relationship with jq. It is so useful for simple things but I find the language so confusing
+for more complex use cases and I find the documentation pretty impenetrable.</p>
+
+</article>
 
   </section>
 </body>
