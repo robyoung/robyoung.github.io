@@ -4,8 +4,35 @@
 	<link href="https://robyoung.digital/til/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://robyoung.digital/til/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-02-14T00:00:00+00:00</updated>
+	<updated>2023-02-27T00:00:00+00:00</updated>
 	<id>https://robyoung.digital/til/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Tools for my Org files</title>
+		<published>2023-02-27T00:00:00+00:00</published>
+		<updated>2023-02-27T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://robyoung.digital/til/orgtools/" type="text/html"/>
+		<id>https://robyoung.digital/til/orgtools/</id>
+		<content type="html">&lt;p&gt;I use manage all my tasks and notes in &lt;a href=&quot;https:&#x2F;&#x2F;orgmode.org&#x2F;&quot;&gt;org files&lt;&#x2F;a&gt; using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nvim-orgmode&#x2F;orgmode&quot;&gt;nvim-orgmode&lt;&#x2F;a&gt;.
+There are some things I&#x27;d like to do with them that is not easy with nvim-orgmode so I decided to start
+writing some tools to work with them.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;count-close&quot;&gt;Count close&lt;&#x2F;h2&gt;
+&lt;p&gt;My first little tool, mostly just to experiment is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;robyoung&#x2F;orgtools&#x2F;blob&#x2F;main&#x2F;count_close.py&quot;&gt;&lt;code&gt;count_close.py&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. It draws simple terminal histograms of tasks closed by time period. Below is a snippet showing tasks closed by day.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; python &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;count_close.py&lt;&#x2F;span&gt;&lt;span&gt; week
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2022-01-03&lt;&#x2F;span&gt;&lt;span&gt;    2  ==
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2022-01-10&lt;&#x2F;span&gt;&lt;span&gt;    0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2022-01-17&lt;&#x2F;span&gt;&lt;span&gt;    0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2022-01-31&lt;&#x2F;span&gt;&lt;span&gt;    1  =
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;...
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2023-01-30&lt;&#x2F;span&gt;&lt;span&gt;   16  ================
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2023-02-06&lt;&#x2F;span&gt;&lt;span&gt;    8  ========
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2023-02-13&lt;&#x2F;span&gt;&lt;span&gt;   13  =============
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2023-02-20&lt;&#x2F;span&gt;&lt;span&gt;   13  =============
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;&#x2F;h2&gt;
+&lt;p&gt;The next thing I&#x27;d like to do is sync some of my calendars with my org files so that I get the notifications about tasks
+and events in one place.&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Filter JSON lines</title>
 		<published>2023-02-14T00:00:00+00:00</published>

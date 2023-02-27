@@ -18,8 +18,6 @@
     rel="icon" type="image/x-icon">
 
   
-  <script src="/grid.js"></script>
-
 
 </head>
 
@@ -39,103 +37,33 @@
 
   <section class="content">
     
+<article>
 
-<div id="grid">
-  
-  <div id="cell-0"></div>
-  
-  <div id="cell-1"></div>
-  
-  <div id="cell-2"></div>
-  
-  <div id="cell-3"></div>
-  
-  <div id="cell-4"></div>
-  
-  <div id="cell-5"></div>
-  
-  <div id="cell-6"></div>
-  
-  <div id="cell-7"></div>
-  
-  <div id="cell-8"></div>
-  
-  <div id="cell-9"></div>
-  
-  <div id="cell-10"></div>
-  
-  <div id="cell-11"></div>
-  
-  <div id="cell-12"></div>
-  
-  <div id="cell-13"></div>
-  
-  <div id="cell-14"></div>
-  
-  <div id="cell-15"></div>
-  
-  <div id="cell-16"></div>
-  
-  <div id="cell-17"></div>
-  
-  <div id="cell-18"></div>
-  
-  <div id="cell-19"></div>
-  
-  <div id="cell-20"></div>
-  
-  <div id="cell-21"></div>
-  
-  <div id="cell-22"></div>
-  
-  <div id="cell-23"></div>
-  
-  <div id="cell-24"></div>
-  
-</div>
+<h1>Tools for my Org files</h1>
 
-<h2>Hello</h2>
-
-<p>I’m Rob, I am a software developer and operations engineer.</p>
-
-<p>I mostly build things that live on the web. This website is a collection of things I have learnt or found interesting.</p>
-
-<h2>Around the Web</h2>
-
-<ul id="social">
-  
-  <li>
-    <a href="https:&#x2F;&#x2F;twitter.com&#x2F;roryoung">
-      <abbr title="twitter" class="social-twitter"></abbr>
-    </a>
-  </li>
-  
-  <li>
-    <a href="https:&#x2F;&#x2F;github.com&#x2F;robyoung">
-      <abbr title="github" class="social-github"></abbr>
-    </a>
-  </li>
-  
-  <li>
-    <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;robyoung101">
-      <abbr title="linkedin" class="social-linkedin"></abbr>
-    </a>
-  </li>
-  
-</ul>
-
-<h2>Latest post</h2>
-
-
-<h3><a href="&#x2F;blog&#x2F;embedded-rust-selecting-a-board&#x2F;">First steps with Embedded Rust: Selecting a board</a></h3>
-<time class="title" datetime="2021-08-26">26 August 2021</time>
-
-<h2><a href="/til">Today I learnt</a></h2>
-
-
-<h3><a href="&#x2F;til&#x2F;orgtools&#x2F;">Tools for my Org files</a></h3>
 <time class="title" datetime="2023-02-27">27 February 2023</time>
 
+<p>I use manage all my tasks and notes in <a href="https://orgmode.org/">org files</a> using <a href="https://github.com/nvim-orgmode/orgmode">nvim-orgmode</a>.
+There are some things I'd like to do with them that is not easy with nvim-orgmode so I decided to start
+writing some tools to work with them.</p>
+<h2 id="count-close">Count close</h2>
+<p>My first little tool, mostly just to experiment is <a href="https://github.com/robyoung/orgtools/blob/main/count_close.py"><code>count_close.py</code></a>. It draws simple terminal histograms of tasks closed by time period. Below is a snippet showing tasks closed by day.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span>&gt; python </span><span style="color:#bf616a;">count_close.py</span><span> week
+</span><span style="color:#bf616a;">2022-01-03</span><span>    2  ==
+</span><span style="color:#bf616a;">2022-01-10</span><span>    0
+</span><span style="color:#bf616a;">2022-01-17</span><span>    0
+</span><span style="color:#bf616a;">2022-01-31</span><span>    1  =
+</span><span style="color:#bf616a;">...
+</span><span style="color:#bf616a;">2023-01-30</span><span>   16  ================
+</span><span style="color:#bf616a;">2023-02-06</span><span>    8  ========
+</span><span style="color:#bf616a;">2023-02-13</span><span>   13  =============
+</span><span style="color:#bf616a;">2023-02-20</span><span>   13  =============
+</span></code></pre>
+<h2 id="next-steps">Next steps</h2>
+<p>The next thing I'd like to do is sync some of my calendars with my org files so that I get the notifications about tasks
+and events in one place.</p>
+
+</article>
 
   </section>
 </body>
