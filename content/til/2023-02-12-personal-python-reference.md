@@ -28,3 +28,7 @@ quickly in future. It's going to start small and either grow (if it's useful) or
   for item in inner
 ]
 ```
+
+### Special methods
+
+[Special method names](https://docs.python.org/3/reference/datamodel.html#special-method-names)
