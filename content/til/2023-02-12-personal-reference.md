@@ -39,7 +39,7 @@ Since [Bash 2.04 some escapes are allowed in $ strings](https://stackoverflow.co
 
 ```bash
 
-> echo $'foo 'bar' foo'
+> echo $'foo \'bar\' foo'
 foo 'bar' foo
 ```
 

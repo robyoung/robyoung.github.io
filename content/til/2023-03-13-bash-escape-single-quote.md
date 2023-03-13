@@ -1,0 +1,18 @@
++++
+date = 2023-03-13
+title = "Escape single quotes in Bash"
+[taxonomies]
+topics = ["linux"]
++++
+
+Today I discovered a much easier way of escaping single quotes in single quoted Bash strings.
+
+```bash
+> echo $'foo \'bar\' foo'
+foo 'bar' foo
+```
+
+Full details can be found in [ANSI C like strings](https://wiki.bash-hackers.org/syntax/quoting#ansi_c_like_strings).
+
+From this [Stack Overflow Answer](https://stackoverflow.com/a/16605140/15720).
+
