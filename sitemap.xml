@@ -49,6 +49,10 @@
         <loc>https://robyoung.digital/til/</loc>
     </url>
     <url>
+        <loc>https://robyoung.digital/til/bash-escape-single-quote/</loc>
+        <lastmod>2023-03-13</lastmod>
+    </url>
+    <url>
         <loc>https://robyoung.digital/til/collapsible-sections-in-github-markdown/</loc>
         <lastmod>2023-02-13</lastmod>
     </url>
@@ -69,7 +73,7 @@
         <lastmod>2023-02-27</lastmod>
     </url>
     <url>
-        <loc>https://robyoung.digital/til/personal-python-reference/</loc>
+        <loc>https://robyoung.digital/til/personal-reference/</loc>
         <lastmod>2023-02-12</lastmod>
     </url>
     <url>

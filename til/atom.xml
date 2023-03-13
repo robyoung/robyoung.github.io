@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-	<title>Rob Young | Digital - today I leart</title>
-	<link href="https://robyoung.digital/til/atom.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://robyoung.digital/til/"/>
-	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-02-27T00:00:00+00:00</updated>
-	<id>https://robyoung.digital/til/atom.xml</id>
-	<entry xml:lang="en">
-		<title>Tools for my Org files</title>
-		<published>2023-02-27T00:00:00+00:00</published>
-		<updated>2023-02-27T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://robyoung.digital/til/orgtools/" type="text/html"/>
-		<id>https://robyoung.digital/til/orgtools/</id>
-		<content type="html">&lt;p&gt;I use manage all my tasks and notes in &lt;a href=&quot;https:&#x2F;&#x2F;orgmode.org&#x2F;&quot;&gt;org files&lt;&#x2F;a&gt; using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nvim-orgmode&#x2F;orgmode&quot;&gt;nvim-orgmode&lt;&#x2F;a&gt;.
+    <title>Rob Young | Digital - today I leart</title>
+    <link href="https://robyoung.digital/til/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://robyoung.digital/til/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-03-13T00:00:00+00:00</updated>
+    <id>https://robyoung.digital/til/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Escape single quotes in Bash</title>
+        <published>2023-03-13T00:00:00+00:00</published>
+        <updated>2023-03-13T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://robyoung.digital/til/bash-escape-single-quote/" type="text/html"/>
+        <id>https://robyoung.digital/til/bash-escape-single-quote/</id>
+        <content type="html">&lt;p&gt;Today I discovered a much easier way of escaping single quotes in single quoted Bash strings.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; echo $&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;foo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt; foo&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;foo &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bar&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; foo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Full details can be found in &lt;a href=&quot;https:&#x2F;&#x2F;wiki.bash-hackers.org&#x2F;syntax&#x2F;quoting#ansi_c_like_strings&quot;&gt;ANSI C like strings&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;From this &lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;16605140&#x2F;15720&quot;&gt;Stack Overflow Answer&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Tools for my Org files</title>
+        <published>2023-02-27T00:00:00+00:00</published>
+        <updated>2023-02-27T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://robyoung.digital/til/orgtools/" type="text/html"/>
+        <id>https://robyoung.digital/til/orgtools/</id>
+        <content type="html">&lt;p&gt;I use manage all my tasks and notes in &lt;a href=&quot;https:&#x2F;&#x2F;orgmode.org&#x2F;&quot;&gt;org files&lt;&#x2F;a&gt; using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nvim-orgmode&#x2F;orgmode&quot;&gt;nvim-orgmode&lt;&#x2F;a&gt;.
 There are some things I&#x27;d like to do with them that is not easy with nvim-orgmode so I decided to start
 writing some tools to work with them.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;count-close&quot;&gt;Count close&lt;&#x2F;h2&gt;
@@ -32,39 +52,48 @@ writing some tools to work with them.&lt;&#x2F;p&gt;
 &lt;p&gt;The next thing I&#x27;d like to do is sync some of my calendars with my org files so that I get the notifications about tasks
 and events in one place.&lt;&#x2F;p&gt;
 </content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Filter JSON lines</title>
-		<published>2023-02-14T00:00:00+00:00</published>
-		<updated>2023-02-14T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://robyoung.digital/til/filter-json-lines/" type="text/html"/>
-		<id>https://robyoung.digital/til/filter-json-lines/</id>
-		<content type="html">&lt;p&gt;Today I learnt how to use &lt;a href=&quot;https:&#x2F;&#x2F;stedolan.github.io&#x2F;jq&#x2F;&quot;&gt;jq&lt;&#x2F;a&gt; to filter &lt;a href=&quot;https:&#x2F;&#x2F;jsonlines.org&#x2F;&quot;&gt;JSON lines&lt;&#x2F;a&gt;
+    </entry>
+    <entry xml:lang="en">
+        <title>Filter JSON lines</title>
+        <published>2023-02-14T00:00:00+00:00</published>
+        <updated>2023-02-14T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://robyoung.digital/til/filter-json-lines/" type="text/html"/>
+        <id>https://robyoung.digital/til/filter-json-lines/</id>
+        <content type="html">&lt;p&gt;Today I learnt how to use &lt;a href=&quot;https:&#x2F;&#x2F;stedolan.github.io&#x2F;jq&#x2F;&quot;&gt;jq&lt;&#x2F;a&gt; to filter &lt;a href=&quot;https:&#x2F;&#x2F;jsonlines.org&#x2F;&quot;&gt;JSON lines&lt;&#x2F;a&gt;
 file returning the whole object of each line.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cat&lt;&#x2F;span&gt;&lt;span&gt; json-lines.json | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;jq &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;if (.name == &amp;quot;something&amp;quot;) then . else empty end&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I have a love hate relationship with jq. It is so useful for simple things but I find the language so confusing
 for more complex use cases and I find the documentation pretty impenetrable.&lt;&#x2F;p&gt;
 </content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Redirect stderr leaving stdout intact</title>
-		<published>2023-02-14T00:00:00+00:00</published>
-		<updated>2023-02-14T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://robyoung.digital/til/redirect-stderr-leaving-stdout-intact/" type="text/html"/>
-		<id>https://robyoung.digital/til/redirect-stderr-leaving-stdout-intact/</id>
-		<content type="html">&lt;p&gt;This is a great little trick for redirecting stderr to another program while leaving stdout intact.&lt;&#x2F;p&gt;
+    </entry>
+    <entry xml:lang="en">
+        <title>Redirect stderr leaving stdout intact</title>
+        <published>2023-02-14T00:00:00+00:00</published>
+        <updated>2023-02-14T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://robyoung.digital/til/redirect-stderr-leaving-stdout-intact/" type="text/html"/>
+        <id>https://robyoung.digital/til/redirect-stderr-leaving-stdout-intact/</id>
+        <content type="html">&lt;p&gt;This is a great little trick for redirecting stderr to another program while leaving stdout intact.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;some-command &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &amp;gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tee -a&lt;&#x2F;span&gt;&lt;span&gt; stderr.log &amp;gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span&gt;)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Collapsible sections in GitHub markdown</title>
-		<published>2023-02-13T00:00:00+00:00</published>
-		<updated>2023-02-13T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://robyoung.digital/til/collapsible-sections-in-github-markdown/" type="text/html"/>
-		<id>https://robyoung.digital/til/collapsible-sections-in-github-markdown/</id>
-		<content type="html">&lt;p&gt;I didn&#x27;t learn this trick today and I rarely need it. However, whenever I do 
+    </entry>
+    <entry xml:lang="en">
+        <title>Collapsible sections in GitHub markdown</title>
+        <published>2023-02-13T00:00:00+00:00</published>
+        <updated>2023-02-13T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://robyoung.digital/til/collapsible-sections-in-github-markdown/" type="text/html"/>
+        <id>https://robyoung.digital/til/collapsible-sections-in-github-markdown/</id>
+        <content type="html">&lt;p&gt;I didn&#x27;t learn this trick today and I rarely need it. However, whenever I do 
 I have to hunt out an issue or pull request where I have used it before.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;problem&quot;&gt;Problem&lt;&#x2F;h2&gt;
 &lt;p&gt;I want a collapsible section within some GitHub markdown.&lt;&#x2F;p&gt;
@@ -83,14 +112,17 @@ block of code or maybe because it will only be relevant to some people.&lt;&#x2F
 &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
-	</entry>
-	<entry xml:lang="en">
-		<title>USB Serial on Linux</title>
-		<published>2023-02-13T00:00:00+00:00</published>
-		<updated>2023-02-13T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://robyoung.digital/til/linux-usb-serial/" type="text/html"/>
-		<id>https://robyoung.digital/til/linux-usb-serial/</id>
-		<content type="html">&lt;p&gt;This documents my journey to getting a USB serial adapter working
+    </entry>
+    <entry xml:lang="en">
+        <title>USB Serial on Linux</title>
+        <published>2023-02-13T00:00:00+00:00</published>
+        <updated>2023-02-13T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://robyoung.digital/til/linux-usb-serial/" type="text/html"/>
+        <id>https://robyoung.digital/til/linux-usb-serial/</id>
+        <content type="html">&lt;p&gt;This documents my journey to getting a USB serial adapter working
 on Linux so that I can flash &lt;a href=&quot;https:&#x2F;&#x2F;sonoff.tech&#x2F;product&#x2F;diy-smart-switches&#x2F;basicr2&#x2F;&quot;&gt;Sonoff Basic R2&lt;&#x2F;a&gt;
 with &lt;a href=&quot;https:&#x2F;&#x2F;esphome.io&#x2F;&quot;&gt;ESPHome&lt;&#x2F;a&gt;. I had a cheap one based on a CH340G
 hanging around that I could not get working so I forked out for one based on 
@@ -159,17 +191,18 @@ and removed &lt;code&gt;modemmanager&lt;&#x2F;code&gt; as I don&#x27;t need it o
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cyberciti.biz&#x2F;faq&#x2F;find-out-linux-serial-ports-with-setserial&#x2F;&quot;&gt;How to check and use serial ports under linux&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Personal Python Reference</title>
-		<published>2023-02-12T00:00:00+00:00</published>
-		<updated>2023-02-12T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://robyoung.digital/til/personal-python-reference/" type="text/html"/>
-		<id>https://robyoung.digital/til/personal-python-reference/</id>
-		<content type="html">&lt;p&gt;I use Python most days but often find myself hunting out the same bits of documentation.
-The goal of this page is to be a reference of those nuggets so that I can find them more
-quickly in future. It&#x27;s going to start small and either grow (if it&#x27;s useful) or go away
-(if it is not).&lt;&#x2F;p&gt;
+    </entry>
+    <entry xml:lang="en">
+        <title>Personal Reference</title>
+        <published>2023-02-12T00:00:00+00:00</published>
+        <updated>2023-02-12T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://robyoung.digital/til/personal-reference/" type="text/html"/>
+        <id>https://robyoung.digital/til/personal-reference/</id>
+        <content type="html">&lt;p&gt;I find myself searching for the same bits of documentation again and again. This page
+is a collection of the things I find myself looking up most often.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;python&quot;&gt;Python&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;f-strings&quot;&gt;f-strings&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -185,15 +218,27 @@ quickly in future. It&#x27;s going to start small and either grow (if it&#x27;s 
 &lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;inner
 &lt;&#x2F;span&gt;&lt;span&gt;]
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;special-methods&quot;&gt;Special methods&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;reference&#x2F;datamodel.html#special-method-names&quot;&gt;Special method names&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;bash&quot;&gt;Bash&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;escape-single-quotes&quot;&gt;Escape single quotes&lt;&#x2F;h3&gt;
+&lt;p&gt;Since &lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;16605140&#x2F;15720&quot;&gt;Bash 2.04 some escapes are allowed in $ strings&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; echo $&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;foo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt; foo&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;foo &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bar&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; foo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Logical Volume Manager</title>
-		<published>2022-11-06T00:00:00+00:00</published>
-		<updated>2022-11-06T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://robyoung.digital/til/logical-volume-manager/" type="text/html"/>
-		<id>https://robyoung.digital/til/logical-volume-manager/</id>
-		<content type="html">&lt;p&gt;Today I used LVM (Logical Volume Manager) on a personal project for the first
+    </entry>
+    <entry xml:lang="en">
+        <title>Logical Volume Manager</title>
+        <published>2022-11-06T00:00:00+00:00</published>
+        <updated>2022-11-06T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://robyoung.digital/til/logical-volume-manager/" type="text/html"/>
+        <id>https://robyoung.digital/til/logical-volume-manager/</id>
+        <content type="html">&lt;p&gt;Today I used LVM (Logical Volume Manager) on a personal project for the first
 time. I had come across it before and even had to use it for attaching new drives
 but I had never set it up before and so hadn&#x27;t taken the time to understand it.
 So far, I love it.&lt;&#x2F;p&gt;
@@ -233,5 +278,5 @@ some great resources. I should learn to search DigitalOcean first.&lt;&#x2F;p&gt
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; lsblk
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
-	</entry>
+    </entry>
 </feed>

@@ -30,21 +30,27 @@
     <nav>
       <ul>
         <li class=""><a href="/blog">posts</a></li>
-        <li class="here"><a href="/topics">topics</a></li>
+        <li class=""><a href="/topics">topics</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="content">
     
-<ul>
-  
-  <li>
-    <h2><a href="/til/personal-reference/">Personal Reference</a></h2>
-    <time class="title" datetime="2023-02-12">12 February 2023</time>
-  </li>
-  
-</ul>
+<article>
+
+<h1>Escape single quotes in Bash</h1>
+
+<time class="title" datetime="2023-03-13">13 March 2023</time>
+
+<p>Today I discovered a much easier way of escaping single quotes in single quoted Bash strings.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span>&gt; echo $&#39;</span><span style="color:#a3be8c;">foo </span><span style="color:#96b5b4;">\&#39;</span><span style="color:#a3be8c;">bar</span><span style="color:#96b5b4;">\&#39;</span><span style="color:#a3be8c;"> foo</span><span>&#39;
+</span><span style="color:#bf616a;">foo </span><span>&#39;</span><span style="color:#a3be8c;">bar</span><span>&#39; foo
+</span></code></pre>
+<p>Full details can be found in <a href="https://wiki.bash-hackers.org/syntax/quoting#ansi_c_like_strings">ANSI C like strings</a>.</p>
+<p>From this <a href="https://stackoverflow.com/a/16605140/15720">Stack Overflow Answer</a>.</p>
+
+</article>
 
   </section>
 </body>

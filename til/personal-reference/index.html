@@ -39,14 +39,12 @@
     
 <article>
 
-<h1>Personal Python Reference</h1>
+<h1>Personal Reference</h1>
 
 <time class="title" datetime="2023-02-12">12 February 2023</time>
 
-<p>I use Python most days but often find myself hunting out the same bits of documentation.
-The goal of this page is to be a reference of those nuggets so that I can find them more
-quickly in future. It's going to start small and either grow (if it's useful) or go away
-(if it is not).</p>
+<p>I find myself searching for the same bits of documentation again and again. This page
+is a collection of the things I find myself looking up most often.</p>
 <h2 id="python">Python</h2>
 <h3 id="f-strings">f-strings</h3>
 <ul>
@@ -61,6 +59,15 @@ quickly in future. It's going to start small and either grow (if it's useful) or
 </span><span>  </span><span style="color:#b48ead;">for </span><span>inner </span><span style="color:#b48ead;">in </span><span>outer
 </span><span>  </span><span style="color:#b48ead;">for </span><span>item </span><span style="color:#b48ead;">in </span><span>inner
 </span><span>]
+</span></code></pre>
+<h3 id="special-methods">Special methods</h3>
+<p><a href="https://docs.python.org/3/reference/datamodel.html#special-method-names">Special method names</a></p>
+<h2 id="bash">Bash</h2>
+<h3 id="escape-single-quotes">Escape single quotes</h3>
+<p>Since <a href="https://stackoverflow.com/a/16605140/15720">Bash 2.04 some escapes are allowed in $ strings</a>.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span>
+</span><span>&gt; echo $&#39;</span><span style="color:#a3be8c;">foo </span><span style="color:#96b5b4;">\&#39;</span><span style="color:#a3be8c;">bar</span><span style="color:#96b5b4;">\&#39;</span><span style="color:#a3be8c;"> foo</span><span>&#39;
+</span><span style="color:#bf616a;">foo </span><span>&#39;</span><span style="color:#a3be8c;">bar</span><span>&#39; foo
 </span></code></pre>
 
 </article>
