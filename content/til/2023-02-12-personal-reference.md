@@ -1,14 +1,12 @@
 +++
 date = 2023-02-12
-title = "Personal Python Reference"
+title = "Personal Reference"
 [taxonomies]
-topics = ["python"]
+topics = ["python", "linux"]
 +++
 
-I use Python most days but often find myself hunting out the same bits of documentation.
-The goal of this page is to be a reference of those nuggets so that I can find them more
-quickly in future. It's going to start small and either grow (if it's useful) or go away
-(if it is not).
+I find myself searching for the same bits of documentation again and again. This page
+is a collection of the things I find myself looking up most often.
 
 ## Python
 
@@ -32,3 +30,16 @@ quickly in future. It's going to start small and either grow (if it's useful) or
 ### Special methods
 
 [Special method names](https://docs.python.org/3/reference/datamodel.html#special-method-names)
+
+## Bash
+
+### Escape single quotes
+
+Since [Bash 2.04 some escapes are allowed in $ strings](https://stackoverflow.com/a/16605140/15720).
+
+```bash
+
+> echo $'foo 'bar' foo'
+foo 'bar' foo
+```
+
