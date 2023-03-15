@@ -72,7 +72,7 @@ and open Instruction Set Architecture (ISA). It has also been designed from outs
 be modular. This means chip designers can create a wide variety of specialised chips. 
 Although at the moment the range of development boards is small. There is an active 
 Rust RISC-V community so it's worth keeping an eye on. If you’re interested in learning 
-more, [SiFive](https://www.sifive.com/why) or [www.riscv.org](www.riscv.org) are both 
+more, [SiFive](https://www.sifive.com/why) or [www.riscv.org](https://www.riscv.org) are both 
 great places to start. In terms of Rust check out the [riscv](https://crates.io/crates/riscv)
 crate.
 
