@@ -15,6 +15,7 @@
         </author>
         <link rel="alternate" href="https://robyoung.digital/blog/embedded-rust-selecting-a-board/" type="text/html"/>
         <id>https://robyoung.digital/blog/embedded-rust-selecting-a-board/</id>
+        
         <content type="html">&lt;h1 id=&quot;selecting-a-board&quot;&gt;Selecting a board&lt;&#x2F;h1&gt;
 &lt;p&gt;There are a bewildering array of microcontrollers out there and an equally bewildering
 array of exciting projects going on in the embedded Rust world. So, how do I know where
@@ -307,6 +308,7 @@ board debugger.&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.sifive.com&#x2F;boards&#x2F;hifive1-rev-b&quot;&gt;HiFive1 Rev B&lt;&#x2F;a&gt; (about £50); RISC-V is the new hotness. There seems to be a lot of activity around it in Rust however it does not yet have the support that ARM Cortex-M has right now. Other boards to keep an eye on here are the &lt;a href=&quot;https:&#x2F;&#x2F;longan.sipeed.com&#x2F;en&#x2F;&quot;&gt;Logan Nano&lt;&#x2F;a&gt; and the &lt;a href=&quot;https:&#x2F;&#x2F;hackaday.com&#x2F;2021&#x2F;02&#x2F;08&#x2F;hands-on-the-risc-v-esp32-c3-will-be-your-new-esp8266&#x2F;&quot;&gt;ESP32-C3&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
+        
     </entry>
     <entry xml:lang="en">
         <title>Create your own certificate authority with openssl - part two</title>
@@ -317,6 +319,7 @@ board debugger.&lt;&#x2F;p&gt;
         </author>
         <link rel="alternate" href="https://robyoung.digital/blog/ssl-certificate-authority-with-openssl-part-two/" type="text/html"/>
         <id>https://robyoung.digital/blog/ssl-certificate-authority-with-openssl-part-two/</id>
+        
         <content type="html">&lt;p&gt;In the &lt;a href=&quot;&#x2F;blog&#x2F;ssl-certificate-authority-with-openssl&#x2F;&quot;&gt;previous post&lt;&#x2F;a&gt; we
 set up certificate authority (CA), installed a CA certificate in our browser and
 went through the process of signing and using some server certificates. In this
@@ -420,6 +423,7 @@ we should be able to test it out.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And we&#x27;re all done!&lt;&#x2F;p&gt;
 </content>
+        
     </entry>
     <entry xml:lang="en">
         <title>Create your own certificate authority with openssl - part one</title>
@@ -430,6 +434,7 @@ we should be able to test it out.&lt;&#x2F;p&gt;
         </author>
         <link rel="alternate" href="https://robyoung.digital/blog/ssl-certificate-authority-with-openssl/" type="text/html"/>
         <id>https://robyoung.digital/blog/ssl-certificate-authority-with-openssl/</id>
+        
         <content type="html">&lt;p&gt;This post is part one of a series on working with openssl to manage your
 own certificate authority (CA) for a couple of different use cases. If you
 just want to get a CA up and running for local development I thoroughly
@@ -589,6 +594,7 @@ server that tests this out, all created with easily scriptable commands. In
 the next post we&#x27;ll create client certificates to identify ourselves with our
 servers.&lt;&#x2F;p&gt;
 </content>
+        
     </entry>
     <entry xml:lang="en">
         <title>Managing multiple GitHub accounts</title>
@@ -599,6 +605,7 @@ servers.&lt;&#x2F;p&gt;
         </author>
         <link rel="alternate" href="https://robyoung.digital/blog/multiple-github-accounts/" type="text/html"/>
         <id>https://robyoung.digital/blog/multiple-github-accounts/</id>
+        
         <content type="html">&lt;p&gt;Authenticating correctly over SSH with multiple GitHub accounts can be a pain.
 Here is how I manage it.&lt;&#x2F;p&gt;
 &lt;p&gt;Before we start, why might you need multiple GitHub accounts at all? I
@@ -628,5 +635,6 @@ repositories to force them to use the work key.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&amp;gt; git &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;config --replace-all&lt;&#x2F;span&gt;&lt;span&gt; remote.origin.url $(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; config remote.origin.url | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sed &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;s&#x2F;github.com&#x2F;github-work&#x2F;g&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
+        
     </entry>
 </feed>
