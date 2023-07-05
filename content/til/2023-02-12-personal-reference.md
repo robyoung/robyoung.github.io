@@ -43,3 +43,14 @@ Since [Bash 2.04 some escapes are allowed in $ strings](https://stackoverflow.co
 foo 'bar' foo
 ```
 
+### Iterate over files with spaces the names
+
+This is usually good enough for my uses. Taken from [this amazing StackExchange answer](https://unix.stackexchange.com/a/9499/443570).
+
+```bash
+find . -type f -name "*.csv" -print0 | while IFS= read -r -d '' file; do
+    echo "file = $file"
+    diff "$file" "/some/other/path/$file"
+    read line </dev/tty
+done
+```
