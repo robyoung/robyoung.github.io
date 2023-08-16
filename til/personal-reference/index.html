@@ -69,6 +69,14 @@ is a collection of the things I find myself looking up most often.</p>
 </span><span>&gt; echo $&#39;</span><span style="color:#a3be8c;">foo </span><span style="color:#96b5b4;">\&#39;</span><span style="color:#a3be8c;">bar</span><span style="color:#96b5b4;">\&#39;</span><span style="color:#a3be8c;"> foo</span><span>&#39;
 </span><span style="color:#bf616a;">foo </span><span>&#39;</span><span style="color:#a3be8c;">bar</span><span>&#39; foo
 </span></code></pre>
+<h3 id="iterate-over-files-with-spaces-the-names">Iterate over files with spaces the names</h3>
+<p>This is usually good enough for my uses. Taken from <a href="https://unix.stackexchange.com/a/9499/443570">this amazing StackExchange answer</a>.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">find</span><span> .</span><span style="color:#bf616a;"> -type</span><span> f</span><span style="color:#bf616a;"> -name </span><span>&quot;</span><span style="color:#a3be8c;">*.csv</span><span>&quot;</span><span style="color:#bf616a;"> -print0 </span><span>| </span><span style="color:#b48ead;">while </span><span style="color:#bf616a;">IFS</span><span>= read</span><span style="color:#bf616a;"> -r -d </span><span>&#39;&#39; file; </span><span style="color:#b48ead;">do
+</span><span>    </span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">file = </span><span>$</span><span style="color:#bf616a;">file</span><span>&quot;
+</span><span>    </span><span style="color:#bf616a;">diff </span><span>&quot;$</span><span style="color:#bf616a;">file</span><span>&quot; &quot;</span><span style="color:#a3be8c;">/some/other/path/</span><span>$</span><span style="color:#bf616a;">file</span><span>&quot;
+</span><span>    </span><span style="color:#96b5b4;">read</span><span> line &lt;/dev/tty
+</span><span style="color:#b48ead;">done
+</span></code></pre>
 
 </article>
 
