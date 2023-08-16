@@ -54,3 +54,9 @@ find . -type f -name "*.csv" -print0 | while IFS= read -r -d '' file; do
     read line </dev/tty
 done
 ```
+
+### Shellcheck warning pages
+
+[https://www.shellcheck.net/wiki/](https://www.shellcheck.net/wiki/)
+
+These pages give the full help pages for each shellcheck lint, including the correct code to use.
