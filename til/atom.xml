@@ -248,6 +248,9 @@ is a collection of the things I find myself looking up most often.&lt;&#x2F;p&gt
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;read&lt;&#x2F;span&gt;&lt;span&gt; line &amp;lt;&#x2F;dev&#x2F;tty
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;done
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;shellcheck-warning-pages&quot;&gt;Shellcheck warning pages&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.shellcheck.net&#x2F;wiki&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.shellcheck.net&#x2F;wiki&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;These pages give the full help pages for each shellcheck lint, including the correct code to use.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
