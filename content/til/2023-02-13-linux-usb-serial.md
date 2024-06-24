@@ -91,6 +91,16 @@ out the offending udev rule in `/usr/lib/udev/rules.d/*-brltty-device.rules`.
 I did also take [this users advice](https://unix.stackexchange.com/questions/670636/unable-to-use-usb-dongle-based-on-usb-serial-converter-chip#comment1264526_670637)
 and removed `modemmanager` as I don't need it on my laptop and don't fancy any more surprises.
 
+## Permissions on `ttyUSB0`
+
+The next issue I had was that my user did not have the correct permissions on `/dev/ttyUSB0`, it needs to have `dialout`.
+
+```bash
+sudo usermod -a -G dialout $USER
+```
+
+And then re-login.
+
 ## References
 
 - [How to check and use serial ports under linux](https://www.cyberciti.biz/faq/find-out-linux-serial-ports-with-setserial/)

@@ -60,3 +60,12 @@ done
 [https://www.shellcheck.net/wiki/](https://www.shellcheck.net/wiki/)
 
 These pages give the full help pages for each shellcheck lint, including the correct code to use.
+
+## Rust
+
+### Cargo
+
+#### Plugins
+
+- [cargo-audit](https://crates.io/crates/cargo-audit)
+- [cargo-tarpaulin](https://crates.io/crates/cargo-tarpaulin)
