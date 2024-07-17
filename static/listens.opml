@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<opml version="1.0">
+  <head>
+    <title>Bob's Listens</title>
+    <dateCreated>17 Jul 2024 19:52:03</dateCreated>
+    <dateModified>17 Jul 2024 19:52:03</dateModified>
+  </head>
+  <body>
+    <outline text="Technology and Software">
+        <outline text="Chats with James Podcast" type="rss" xmlUrl="https://jamesmunns.com/podcast-feed-m4a.xml" htmlUrl="https://jamesmunns.com/podcast/" imageUrl="https://delivery.jamescdn.com/logo2.png" />
+        <outline text="core.py" type="rss" xmlUrl="https://anchor.fm/s/eb6edc3c/podcast/rss" htmlUrl="https://podcasters.spotify.com/pod/show/corepy" imageUrl="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/39399111/39399111-1699803114817-02d2c67923346.jpg" />
+        <outline text="Darknet Diaries" type="rss" xmlUrl="https://podcast.darknetdiaries.com" htmlUrl="https://darknetdiaries.com/" imageUrl="https://f.prxu.org/7057/images/68ff605a-20f3-437f-9ba9-2d17316724b1/uploads_2F1562951997273-pdd2keiryql-99f75240ab90a579e25720d85d3057b2_2Fdarknet-diaries-rss.jpg" />
+        <outline text="Embedded" type="rss" xmlUrl="https://makingembeddedsystems.libsyn.com/rss" htmlUrl="https://embedded.fm" imageUrl="https://static.libsyn.com/p/assets/f/3/f/d/f3fdef15647a4158/logo.jpg" />
+        <outline text="Environment Variables" type="rss" xmlUrl="https://feeds.bcast.fm/environment-variables" htmlUrl="https://podcasts.bcast.fm/environment-variables" imageUrl="https://content.bcastcdn.com/uploads/8l18vy21/9abdfe60-cedb-11ee-ab37-7bf5ee43afa6/9abdffd0-cedb-11ee-8cd6-3d591eb333b8.jpg" />
+        <outline text="Hackaday Podcast" type="rss" xmlUrl="https://hackaday.libsyn.com/rss" htmlUrl="https://hackaday.com" imageUrl="https://static.libsyn.com/p/assets/4/9/7/b/497b2a653a4a1b1a/avatars-000550623855-ybfkqd-original.jpg" />
+        <outline text="Igalia Chats" type="rss" xmlUrl="https://www.igalia.com/chats.xml" htmlUrl="https://www.igalia.com" imageUrl="https://www.igalia.com/assets/i/chats-logo-square.png" />
+        <outline text="Molly White's Citation Needed" type="rss" xmlUrl="https://www.spreaker.com/show/6019906/episodes/feed" htmlUrl="https://www.citationneeded.news" imageUrl="https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/4a3ae034511d21fdbb2833dee3906c2b.jpg" />
+        <outline text="Oxide and Friends" type="rss" xmlUrl="https://feeds.transistor.fm/oxide-and-friends" htmlUrl="http://oxide.computer" imageUrl="https://img.transistor.fm/C2DcdC-jET8zt_BGespqxWtOEve_Y6IqHguw3ctS_eU/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9zaG93/LzI5MjU2LzE2NDg0/OTAxMDAtYXJ0d29y/ay5qcGc.jpg" />
+        <outline text="Postgres FM" type="rss" xmlUrl="https://feeds.transistor.fm/postgres-fm" htmlUrl="" imageUrl="https://img.transistor.fm/A5DxJFGLifGO6wpJ_neYXztiuzfumzLBERPx0aq4Y5w/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9zaG93/LzMyMTQ3LzE3MTA3/OTEzODMtYXJ0d29y/ay5qcGc.jpg" />
+        <outline text="Python Bytes" type="rss" xmlUrl="https://pythonbytes.fm/episodes/rss" htmlUrl="https://pythonbytes.fm/" imageUrl="https://cdn.pythonbytes.fm/static/img/podcast-theme-img_1400.png" />
+        <outline text="Python Test" type="rss" xmlUrl="https://feeds.transistor.fm/test-code-in-python" htmlUrl="https://podcast.pythontest.com" imageUrl="https://img.transistor.fm/mdgDPZ_QPzw_oEPN99jMHAUZnXzL7i2kAoqRJr1k9GA/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9zaG93/LzQzMjkxLzE2OTUy/NDgxMTctYXJ0d29y/ay5qcGc.jpg" />
+        <outline text="Rustacean Station" type="rss" xmlUrl="https://rustacean-station.org/podcast.rss" htmlUrl="https://rustacean-station.org" imageUrl="https://rustacean-station.org/images/artwork.jpg" />
+        <outline text="Rust in Production" type="rss" xmlUrl="https://letscast.fm/podcasts/rust-in-production-82281512/feed" htmlUrl="https://corrode.dev/podcast" imageUrl="https://lcdn.letscast.fm/media/podcast/a100f0a6/artwork-3000x3000.png?t=1702310004" />
+        <outline text="Signals and Threads" type="rss" xmlUrl="https://feeds.simplecast.com/L9810DOa" htmlUrl="https://signals-threads.simplecast.com" imageUrl="https://image.simplecastcdn.com/images/d8aba2bf-5388-42b5-a07c-479b767dfa4a/01c9b0c4-650e-4a32-bbcc-0d90437c9183/3000x3000/afd00d08-0bba-45b9-bf55-1b5afa3d2b9b.jpg?aid=rss_feed" />
+        <outline text="Talk Python To Me" type="rss" xmlUrl="https://talkpython.fm/episodes/rss" htmlUrl="https://talkpython.fm/" imageUrl="https://cdn-podcast.talkpython.fm/static/img/podcast-theme-img_1400_v3.png" />
+        <outline text="The InfoQ Podcast" type="rss" xmlUrl="https://feeds.soundcloud.com/users/soundcloud:users:215740450/sounds.rss" htmlUrl="https://bit.ly/3yxbEaU" imageUrl="https://i1.sndcdn.com/avatars-000562967820-b6wqfw-original.jpg" />
+        <outline text="The Real Python Podcast" type="rss" xmlUrl="https://realpython.com/podcasts/rpp/feed" htmlUrl="https://realpython.com/podcasts/rpp/" imageUrl="https://files.realpython.com/media/real-python-logo-square.28474fda9228.png" />
+    </outline>
+
+
+    <outline text="History and Current Affairs">
+        <outline text="Behind the Bastards" type="rss" xmlUrl="https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/e5f91208-cc7e-4726-a312-ae280140ad11/d64f756d-6d5e-4fae-b24f-ae280140ad36/podcast.rss" htmlUrl="https://www.iheart.com/podcast/105-behind-the-bastards-29236323/" imageUrl="https://www.omnycontent.com/d/programs/e73c998e-6e60-432f-8610-ae210140c5b1/e5f91208-cc7e-4726-a312-ae280140ad11/image.jpg?t=1684961682&amp;size=Large" />
+        <outline text="Empire" type="rss" xmlUrl="https://feeds.megaphone.fm/empirepodcast" htmlUrl="" imageUrl="https://megaphone.imgix.net/podcasts/fd2a0636-1a33-11ed-ab72-cfc196c4f5e8/image/Podcast_Thumbnail__3000x_3000__.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress" />
+        <outline text="More or Less: Behind the Stats" type="rss" xmlUrl="https://podcasts.files.bbci.co.uk/p02nrss1.rss" htmlUrl="http://www.bbc.co.uk/programmes/p02nrss1" imageUrl="http://ichef.bbci.co.uk/images/ic/3000x3000/p058ggtp.jpg" />
+        <outline text="Origin Story" type="rss" xmlUrl="https://feeds.megaphone.fm/originstory" htmlUrl="" imageUrl="https://megaphone.imgix.net/podcasts/9e94abb2-d5e6-11ec-ad02-7b0263135b23/image/Show_Cover-Origin_Story.jpeg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress" />
+        <outline text="Page 94: The Private Eye Podcast" type="rss" xmlUrl="https://audioboom.com/channels/5112392.rss" htmlUrl="https://audioboom.com/channels/5112392-page-94-the-private-eye-podcast" imageUrl="https://audioboom.com/i/40758185.jpg" />
+        <outline text="Politics Weekly UK" type="rss" xmlUrl="https://www.theguardian.com/politics/series/politicsweekly/podcast.xml" htmlUrl="https://www.theguardian.com/politics/series/politicsweekly" imageUrl="https://uploads.guim.co.uk/2022/02/18/PoliticsWeekly_UK3000.jpg" />
+        <outline text="Tech Won't Save Us" type="rss" xmlUrl="https://feeds.buzzsprout.com/1004689.rss" htmlUrl="https://techwontsave.us/" imageUrl="https://storage.buzzsprout.com/0752tal6xyzzh96maunpflcuqg8p?.jpg" />
+        <outline text="The Explainer" type="rss" xmlUrl="https://feeds.soundcloud.com/users/soundcloud:users:584216289/sounds.rss" htmlUrl="http://thejournal.ie" imageUrl="https://i1.sndcdn.com/avatars-mmvrNQ0T54ln6LBJ-kmCiTw-original.jpg" />
+        <outline text="The Inquiry" type="rss" xmlUrl="https://podcasts.files.bbci.co.uk/p029399x.rss" htmlUrl="http://www.bbc.co.uk/programmes/p029399x" imageUrl="http://ichef.bbci.co.uk/images/ic/3000x3000/p0f8hljv.jpg" />
+        <outline text="The Real Story" type="rss" xmlUrl="https://podcasts.files.bbci.co.uk/p02dbd4m.rss" htmlUrl="http://www.bbc.co.uk/programmes/p02dbd4m" imageUrl="http://ichef.bbci.co.uk/images/ic/3000x3000/p05ywdyb.jpg" />
+        <outline text="The Rest Is Politics" type="rss" xmlUrl="https://feeds.megaphone.fm/GLT9190936013" htmlUrl="http://therestispolitics.com/" imageUrl="https://megaphone.imgix.net/podcasts/ebd5041a-2425-11ee-9505-bbe771b4af3b/image/c753a37186960a497ee5056a62885d98.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress" />
+        <outline text="Things Fell Apart" type="rss" xmlUrl="https://podcasts.files.bbci.co.uk/m0011cpr.rss" htmlUrl="http://www.bbc.co.uk/programmes/m0011cpr" imageUrl="http://ichef.bbci.co.uk/images/ic/3000x3000/p0h23g4v.jpg" />
+        <outline text="Today in Focus" type="rss" xmlUrl="https://www.theguardian.com/news/series/todayinfocus/podcast.xml" htmlUrl="https://www.theguardian.com/news/series/todayinfocus" imageUrl="https://uploads.guim.co.uk/2022/02/10/TiF_FINAL_3000x3000.jpg" />
+    </outline>
+
+    <outline text="Climate and Energy">
+        <outline text="Cleaning Up: Leadership in an Age of Climate Change" type="rss" xmlUrl="https://feeds.simplecast.com/j3au6_cC" htmlUrl="https://cleaning-up-leadership-in-the-age-of-climate-change.simplecast.com" imageUrl="https://image.simplecastcdn.com/images/7a946068-7996-4fa8-8e7b-96a87e0030f8/11e62b10-66c0-4df3-8f24-8eea9ec5ddaf/3000x3000/logo.jpg?aid=rss_feed" />
+        <outline text="DER Task Force" type="rss" xmlUrl="https://api.substack.com/feed/podcast/369900.rss" htmlUrl="https://www.dertaskforce.com/podcast" imageUrl="https://substackcdn.com/feed/podcast/369900/87149e218f457dc27780dc04e90167af.jpg" />
+        <outline text="Energy Transition Now" type="rss" xmlUrl="https://feeds.buzzsprout.com/1779351.rss" htmlUrl="https://energytransitionnow.buzzsprout.com" imageUrl="https://storage.buzzsprout.com/o9jf0vubqy3awvufs2csfq029thc?.jpg" />
+        <outline text="Energy Unplugged by Aurora" type="rss" xmlUrl="https://feeds.buzzsprout.com/2313552.rss" htmlUrl="http://www.auroraer.com" imageUrl="https://storage.buzzsprout.com/iwod68zp60v8aqpi0im61p6rnbmg?.jpg" />
+        <outline text="Energy Voice – Out Loud" type="rss" xmlUrl="https://energyvoiceoutloud.podbean.com/feed.xml" htmlUrl="https://energyvoiceoutloud.podbean.com" imageUrl="https://pbcdn1.podbean.com/imglogo/image-logo/8082988/EVOL_podcast_artwork.jpg" />
+        <outline text="Oxford Institute for Energy Studies" type="rss" xmlUrl="https://www.oxfordenergy.org/publication-category/podcast/feed/" htmlUrl="https://www.oxfordenergy.org/publication-category/podcast/" imageUrl="https://www.oxfordenergy.org/wpcms/wp-content/uploads/2017/02/OIES_logo.png" />
+        <outline text="The Clean Energy Revolution" type="rss" xmlUrl="https://feeds.captivate.fm/the-clean-energy/" htmlUrl="https://www.nationalgrid.com/" imageUrl="https://artwork.captivate.fm/18309744-578f-4129-99ca-cd446c80d51c/XCP9WnPaWMWebvjwtn7DwW6v.jpg" />
+        <outline text="The Climate Question" type="rss" xmlUrl="https://podcasts.files.bbci.co.uk/w13xtvb6.rss" htmlUrl="http://www.bbc.co.uk/programmes/w13xtvb6" imageUrl="http://ichef.bbci.co.uk/images/ic/3000x3000/p0j3kkn5.jpg" />
+        <outline text="The Interchange: Recharged" type="rss" xmlUrl="https://rss.art19.com/the-interchange" htmlUrl="https://art19.com/shows/the-interchange" imageUrl="https://content.production.cdn.art19.com/images/26/7b/ef/58/267bef58-d587-4f4d-845f-6a1fb7cc6c98/299c012a6804398835f9332a09a2f15a8e6dcc7e13b6fb1b165248af839bbf1cb843c8973a2a8f967efd36f981846cee98f47859f89bd191c2c3f44bfcc4c2a1.jpeg" />
+        <outline text="Unearthed - Nature needs us" type="rss" xmlUrl="https://www.omnycontent.com/d/playlist/2e9a850c-e6b9-48c2-afec-a8f8010f70f4/a8c5fb5e-a860-4adb-b047-abf9012a6bee/81a0d6e0-491b-4bc3-9ed6-abf9012bf2f6/podcast.rss" htmlUrl="https://www.kew.org/about-us/virtual-kew-wakehurst/unearthed-kew-podcast" imageUrl="https://www.omnycontent.com/d/programs/2e9a850c-e6b9-48c2-afec-a8f8010f70f4/a8c5fb5e-a860-4adb-b047-abf9012a6bee/image.jpg?t=1716023497&amp;size=Large" />
+        <outline text="Volts" type="rss" xmlUrl="https://api.substack.com/feed/podcast/193024.rss" htmlUrl="https://www.volts.wtf/podcast" imageUrl="https://substackcdn.com/feed/podcast/193024/9759d6c6bdb48d0b6d52469456f303bf.jpg" />
+    </outline>
+
+
+    <outline text="Science and Engineering">
+        <outline text="CrowdScience" type="rss" xmlUrl="https://podcasts.files.bbci.co.uk/p04d42rc.rss" htmlUrl="http://www.bbc.co.uk/programmes/p04d42rc" imageUrl="http://ichef.bbci.co.uk/images/ic/3000x3000/p0j49h88.jpg" />
+        <outline text="From Newcastle" type="rss" xmlUrl="https://podcasts.ncl.ac.uk/fromnewcastle/feed/podcast/" htmlUrl="https://podcasts.ncl.ac.uk/fromnewcastle/" imageUrl="https://podcasts.ncl.ac.uk/fromnewcastle/files/2023/02/from-newcastle-podcast-cover-image-large-scaled.jpg" />
+        <outline text="Hidden Brain" type="rss" xmlUrl="https://feeds.simplecast.com/kwWc0lhf" htmlUrl="https://www.stitcher.com" imageUrl="https://image.simplecastcdn.com/images/5b7d8c77-15ba-4eff-a999-2e725db21db5/5da6be39-fd7a-4d15-80cb-9b518d140957/3000x3000/hidden-brain-cover.jpg?aid=rss_feed" />
+        <outline text="Physics World Weekly Podcast" type="rss" xmlUrl="https://physicsworld.com/feed/podcast-weekly" htmlUrl="https://physicsworld.com/a/precision-medicine-meet-two-medical-physicists-who-are-making-it-possible/" imageUrl="https://physicsworld.com/wp-content/uploads/2021/01/PW-podcast-logo-WEEKLY-resized.jpg" />
+        <outline text="Risky or Not?" type="rss" xmlUrl="https://riskyornot.libsyn.com/rss" htmlUrl="http://riskyornot.co" imageUrl="https://static.libsyn.com/p/assets/e/2/5/6/e256bec2ad388475/risky_or_not_color_art_-_final_3000x3000.jpg" />
+        <outline text="Science Weekly" type="rss" xmlUrl="https://iono.fm/rss/chan/1308" htmlUrl="http://www.guardian.co.uk" imageUrl="https://static.iono.fm/files/p20/logo_20_20191028_140727_1400.jpg" />
+        <outline text="The Gray Area with Sean Illing" type="rss" xmlUrl="https://feeds.megaphone.fm/theezrakleinshow" htmlUrl="https://www.vox.com/vox-conversations-podcast" imageUrl="https://megaphone.imgix.net/podcasts/d5e1ef20-e112-11e8-83b5-ff093e8a88a8/image/TileArtwork_TheGrayArea_3000x3000__2_.png?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress" />
+        <outline text="The Life Scientific" type="rss" xmlUrl="https://podcasts.files.bbci.co.uk/b015sqc7.rss" htmlUrl="http://www.bbc.co.uk/programmes/b015sqc7" imageUrl="http://ichef.bbci.co.uk/images/ic/3000x3000/p0c7h3zn.jpg" />
+        <outline text="Well There‘s Your Problem" type="rss" xmlUrl="https://feed.podbean.com/wtyppod/feed.xml" htmlUrl="https://wtyppod.podbean.com" imageUrl="https://pbcdn1.podbean.com/imglogo/image-logo/6563527/danger-not-only-will-this-kill-you-it-will-hurt-19375548_pod.jpg" />
+    </outline>
+
+
+    <outline text="Everything else">
+        <outline text="Old Man Yells at Spaceship" type="rss" xmlUrl="https://anchor.fm/s/94f9eef0/podcast/rss" htmlUrl="https://oldmanyellsatspaceship.tumblr.com/" imageUrl="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/24894076/24894076-1655571744758-91e09c95251dd.jpg" />
+        <outline text="The Allusionist" type="rss" xmlUrl="https://www.omnycontent.com/d/playlist/3aeeb75f-3358-42d4-8232-acad017ea3bd/dac5a742-0a1b-4f4b-b917-acb7015564f7/e7e10a67-651c-4ddf-9c47-acb70155651d/podcast.rss" htmlUrl="http://theallusionist.org/" imageUrl="https://www.omnycontent.com/d/playlist/3aeeb75f-3358-42d4-8232-acad017ea3bd/dac5a742-0a1b-4f4b-b917-acb7015564f7/e7e10a67-651c-4ddf-9c47-acb70155651d/image.jpg?t=1611261780&amp;size=Large" />
+        <outline text="The Paxton &amp; Whitfield Cheese Podcast" type="rss" xmlUrl="https://paxtonandwhitfield.podomatic.com/rss2.xml" htmlUrl="https://www.podomatic.com/podcasts/paxtonandwhitfield" imageUrl="https://assets.podomatic.net/ts/90/94/2b/jermynstreet/1400x1400_12665903.jpg" />
+    </outline>
+  </body>
+</opml>
