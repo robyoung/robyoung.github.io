@@ -11,7 +11,7 @@ build_search_index = false
 default_language = "en"
 
 # Whether to generate an atom feed
-generate_feed = false
+generate_feeds = false
 
 taxonomies = [
   {name = "topics"}
